@@ -20,6 +20,159 @@ const sections = [
   { id: 'questionario', label: 'Questionário', icon: '📝' },
 ];
 
+const flashCardData = [
+  {
+    category: "Juros",
+    cards: [
+      {
+        front: "Qual a fórmula dos Juros Simples e o que cada letra significa?",
+        back: "J=C⋅i⋅t. J = Juros, C = Capital, i = Taxa de Juros, t = Tempo."
+      },
+      {
+        front: "Qual a fórmula dos Juros Compostos e o que cada letra significa?",
+        back: "M=C⋅(1+i)ⁿ. M = Montante, C = Capital, i = Taxa de Juros, n = Tempo."
+      }
+    ]
+  },
+  {
+    category: "Renda Fixa",
+    cards: [
+      {
+        front: "O que significa um investimento de Renda Fixa prefixada?",
+        back: "O retorno do investimento é conhecido exatamente no dia do vencimento."
+      },
+      {
+        front: "O que significa um investimento de Renda Fixa pós-fixada?",
+        back: "O retorno só é conhecido no dia do vencimento, pois acompanha um índice de referência."
+      },
+      {
+        front: "Qual o principal objetivo do IPCA?",
+        back: "Medir a inflação oficial do país."
+      },
+      {
+        front: "Qual a função da Taxa Selic?",
+        back: "É a taxa básica de juros da economia brasileira, que influencia o custo dos juros e o ganho dos investimentos."
+      },
+      {
+        front: "Quem decide a Taxa Selic Meta e com que frequência?",
+        back: "O Comitê de Política Monetária (COPOM), 8 vezes por ano (a cada 45 dias)."
+      },
+      {
+        front: "Qual o limite de cobertura do FGC por CPF e por instituição financeira?",
+        back: "R$ 250.000,00 por CPF e por instituição financeira."
+      },
+      {
+        front: "Por que os Títulos Públicos (Tesouro Direto) são considerados os investimentos mais seguros do Brasil?",
+        back: "Porque são emitidos pelo governo brasileiro e têm o menor risco de crédito do país."
+      },
+      {
+        front: "Qual Título Público é ideal para reserva de emergência e por quê?",
+        back: "Tesouro Selic, pois rende diariamente conforme a Selic e tem alta liquidez para resgate."
+      }
+    ]
+  },
+  {
+    category: "Renda Variável",
+    cards: [
+      {
+        front: "O que são ações?",
+        back: "Títulos que representam uma parte do capital social de uma empresa, tornando o investidor sócio."
+      },
+      {
+        front: "Qual a diferença entre Ações Ordinárias (ON) e Preferenciais (PN)?",
+        back: "ON dão direito a voto. PN dão prioridade no recebimento de dividendos e reembolso de capital, mas geralmente sem voto."
+      },
+      {
+        front: "O que é um IPO?",
+        back: "A Oferta Pública Inicial, o primeiro lançamento de ações de uma empresa no mercado."
+      },
+      {
+        front: "O que são FIIs e quais seus dois principais tipos de investimento?",
+        back: "Fundos de Investimento Imobiliário. Investem em \"tijolos\" (imóveis físicos) ou em \"papel\" (títulos imobiliários)."
+      },
+      {
+        front: "O que são ETFs?",
+        back: "Fundos de investimento que replicam um índice e são negociados na bolsa como se fossem ações."
+      }
+    ]
+  },
+  {
+    category: "Macroeconomia",
+    cards: [
+      {
+        front: "O que acontece com a Taxa Selic quando a inflação está alta?",
+        back: "O COPOM tende a aumentar a Selic para desestimular consumo e investimentos, combatendo a inflação."
+      },
+      {
+        front: "Qual o impacto de uma inflação alta no poder de compra?",
+        back: "O dinheiro vale menos, pois se compra menos com a mesma quantia."
+      },
+      {
+        front: "O que o PIB mede?",
+        back: "O valor total de todos os bens e serviços finais produzidos dentro de um país em um ano."
+      }
+    ]
+  }
+];
+
+const quizData = [
+  {
+    difficulty: "Fácil",
+    questions: [
+      {
+        question: "Qual é o nome da bolsa de valores oficial do Brasil, com sede em São Paulo?",
+        answer: "B3 (Brasil, Bolsa, Balcão)."
+      },
+      {
+        question: "Qual é a fórmula dos Juros Simples?",
+        answer: "J=C⋅i⋅t."
+      },
+      {
+        question: "No Juros Composto, o que representa a letra \"M\" na fórmula M=C⋅(1+i)ⁿ?",
+        answer: "Montante."
+      },
+      {
+        question: "Em um investimento de Renda Fixa, se a remuneração é prefixada, você sabe o retorno em qual momento?",
+        answer: "No dia da contratação (início)."
+      },
+      {
+        question: "Qual índice é considerado o principal indicador da inflação oficial do Brasil?",
+        answer: "IPCA (Índice Nacional de Preços ao Consumidor Amplo)."
+      }
+    ]
+  },
+  {
+    difficulty: "Médio",
+    questions: [
+      {
+        question: "Explique a principal diferença entre Juros Simples e Juros Compostos.",
+        answer: "Juros Simples incidem apenas sobre o capital inicial, resultando em crescimento linear. Juros Compostos incidem sobre o capital inicial acrescido dos juros já acumulados, resultando em crescimento exponencial."
+      },
+      {
+        question: "Se um investimento de Renda Fixa tem remuneração pós-fixada atrelada ao IPCA, o que isso significa para o investidor?",
+        answer: "Significa que o ganho exato só será conhecido no vencimento, pois ele irá variar conforme a inflação (IPCA) ao longo do período do investimento."
+      },
+      {
+        question: "Explique por que o COPOM aumenta a Taxa Selic quando a inflação está alta.",
+        answer: "O COPOM aumenta a Selic para encarecer o crédito, desestimular o consumo e os investimentos. Com menos dinheiro circulando e menos demanda por bens e serviços, a tendência é que os preços se estabilizem ou diminuam, combatendo a inflação."
+      }
+    ]
+  },
+  {
+    difficulty: "Difícil",
+    questions: [
+      {
+        question: "Em qual cenário econômico o Tesouro Prefixado pode ser mais vantajoso que o Tesouro Selic, e por quê?",
+        answer: "O Tesouro Prefixado pode ser mais vantajoso em um cenário de expectativa de queda da Taxa Selic. Isso porque, ao prefixar a taxa de retorno, o investidor \"trava\" uma rentabilidade maior do que a Selic que possivelmente cairá no futuro."
+      },
+      {
+        question: "Explique como a Taxa Selic atua como uma ferramenta do COPOM para controlar a inflação, detalhando o mecanismo por trás dessa relação.",
+        answer: "Quando a inflação está alta, o COPOM aumenta a Taxa Selic. Isso eleva o custo dos empréstimos e financiamentos para empresas e consumidores. Juros mais altos desestimulam o consumo e os investimentos. Com menor demanda por bens e serviços na economia e menos dinheiro em circulação, a tendência natural é que os preços se estabilizem ou diminuam, contendo a inflação."
+      }
+    ]
+  }
+];
+
 interface InteractiveCardProps {
   title: string;
   description: string;
