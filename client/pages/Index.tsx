@@ -25,7 +25,7 @@ const flashCardData = [
     category: "Juros",
     cards: [
       {
-        front: "Qual a fórmula dos Juros Simples e o que cada letra significa?",
+        front: "Qual a f��rmula dos Juros Simples e o que cada letra significa?",
         back: "J=C⋅i⋅t. J = Juros, C = Capital, i = Taxa de Juros, t = Tempo."
       },
       {
@@ -178,6 +178,51 @@ interface InteractiveCardProps {
   description: string;
   details: { title: string; content: string }[];
 }
+
+interface FlashCardProps {
+  front: string;
+  back: string;
+}
+
+const FlashCard: React.FC<FlashCardProps> = ({ front, back }) => {
+  const [isFlipped, setIsFlipped] = useState(false);
+
+  return (
+    <div
+      className="relative w-full h-64 cursor-pointer perspective-1000"
+      onClick={() => setIsFlipped(!isFlipped)}
+    >
+      <div
+        className={cn(
+          "absolute inset-0 w-full h-full transition-transform duration-500 transform-style-preserve-3d",
+          isFlipped && "rotate-y-180"
+        )}
+      >
+        {/* Front */}
+        <div className="absolute inset-0 w-full h-full backface-hidden">
+          <Card className="h-full flex items-center justify-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200">
+            <div className="text-center">
+              <div className="text-sm text-blue-600 font-semibold mb-2">PERGUNTA</div>
+              <p className="text-gray-800 font-medium">{front}</p>
+              <div className="text-xs text-gray-500 mt-4">Clique para ver a resposta</div>
+            </div>
+          </Card>
+        </div>
+
+        {/* Back */}
+        <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180">
+          <Card className="h-full flex items-center justify-center p-6 bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-200">
+            <div className="text-center">
+              <div className="text-sm text-green-600 font-semibold mb-2">RESPOSTA</div>
+              <p className="text-gray-800 font-medium">{back}</p>
+              <div className="text-xs text-gray-500 mt-4">Clique para voltar à pergunta</div>
+            </div>
+          </Card>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const InteractiveCard: React.FC<InteractiveCardProps> = ({ title, description, details }) => {
   const [isExpanded, setIsExpanded] = useState(false);
