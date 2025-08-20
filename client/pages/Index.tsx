@@ -5,6 +5,7 @@ import { Button } from '../components/ui/button';
 import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
+import { Progress } from '../components/ui/progress';
 import { cn } from '../lib/utils';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
@@ -399,7 +400,7 @@ export default function Index() {
                 { title: "Tesouro Selic", content: "Pós-fixado, ideal para reserva de emergência." },
                 { title: "Tesouro Prefixado", content: "Rentabilidade definida na compra." },
                 { title: "Tesouro IPCA+", content: "Protege seu dinheiro da inflação." },
-                { title: "RendA+ e Educa+", content: "Focados em aposentadoria e educa��ão, com pagamentos mensais no futuro." }
+                { title: "RendA+ e Educa+", content: "Focados em aposentadoria e educação, com pagamentos mensais no futuro." }
               ]}
             />
 
