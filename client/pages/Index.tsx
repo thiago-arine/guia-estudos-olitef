@@ -264,6 +264,46 @@ const quizData = [
       {
         question: "Qual índice é considerado o principal indicador da inflação oficial do Brasil?",
         answer: "IPCA (Índice Nacional de Preços ao Consumidor Amplo)."
+      },
+      {
+        question: "Qual o nome da taxa básica de juros da economia brasileira?",
+        answer: "Taxa Selic."
+      },
+      {
+        question: "Qual risco em investimentos de Renda Fixa se refere à chance de o emissor não devolver o dinheiro investido (calote)?",
+        answer: "Risco de Crédito."
+      },
+      {
+        question: "Qual fundo garante depósitos em conta e investimentos bancários em até R$ 250.000,00 por CPF e por instituição financeira?",
+        answer: "FGC (Fundo Garantidor de Crédito)."
+      },
+      {
+        question: "Qual a regra de rentabilidade da Poupança quando a Taxa Selic Meta está acima de 8,5% ao ano?",
+        answer: "0,5% ao mês + Taxa Referencial (TR)."
+      },
+      {
+        question: "Os Títulos Públicos são considerados os investimentos mais seguros do Brasil por serem emitidos por quem?",
+        answer: "Pelo governo brasileiro (Tesouro Nacional)."
+      },
+      {
+        question: "Qual tipo de Título Público é ideal para a reserva de emergência por render diariamente conforme a Taxa Selic?",
+        answer: "Tesouro Selic."
+      },
+      {
+        question: "O que são a��ões?",
+        answer: "Títulos que representam uma parte do capital social de uma sociedade anônima (empresa)."
+      },
+      {
+        question: "Qual o nome da primeira emissão de ações de uma empresa no mercado, para o público em geral?",
+        answer: "IPO (Oferta Pública Inicial)."
+      },
+      {
+        question: "O que o Ibovespa B3 mede?",
+        answer: "O desempenho médio das ações das maiores e mais negociadas empresas da B3."
+      },
+      {
+        question: "O que significa \"Amortização\" em uma dívida?",
+        answer: "Aplicar pagamentos extras ao principal da dívida."
       }
     ]
   },
@@ -276,11 +316,47 @@ const quizData = [
       },
       {
         question: "Se um investimento de Renda Fixa tem remuneração pós-fixada atrelada ao IPCA, o que isso significa para o investidor?",
-        answer: "Significa que o ganho exato só será conhecido no vencimento, pois ele irá variar conforme a inflação (IPCA) ao longo do período do investimento."
+        answer: "Significa que o ganho exato só será conhecido no vencimento, pois ele irá variar conforme a inflaç��o (IPCA) ao longo do período do investimento."
+      },
+      {
+        question: "Além do risco de crédito e liquidez, qual outro risco importante deve ser considerado em investimentos de Renda Fixa, especialmente se for preciso vender o título antes do vencimento? Explique.",
+        answer: "Risco de Mercado. Ele se refere à oscilação do preço do título no mercado secundário devido a mudanças nas taxas de juros ou condições econômicas. Se o investidor precisar vender antes do vencimento, pode ter perdas."
+      },
+      {
+        question: "Qual a principal diferença de rentabilidade da Poupança em relação a títulos pós-fixados atuais?",
+        answer: "A Poupança só rende a cada 30 dias (no aniversário), enquanto os títulos pós-fixados atuais geralmente rendem diariamente."
+      },
+      {
+        question: "Qual a principal vantagem do Tesouro IPCA+ e para quais objetivos ele é mais indicado?",
+        answer: "Sua principal vantagem é a proteção contra a inflação, pois parte da remuneração é atrelada ao IPCA. É indicado para objetivos de longo prazo, como aposentadoria e educação, garantindo o poder de compra."
       },
       {
         question: "Explique por que o COPOM aumenta a Taxa Selic quando a inflação está alta.",
         answer: "O COPOM aumenta a Selic para encarecer o crédito, desestimular o consumo e os investimentos. Com menos dinheiro circulando e menos demanda por bens e serviços, a tendência é que os preços se estabilizem ou diminuam, combatendo a inflação."
+      },
+      {
+        question: "Como o PIB de um país se relaciona com a arrecadação de impostos e investimentos públicos?",
+        answer: "Se a economia (medida pelo PIB) cresce, a arrecadação de impostos tende a aumentar, o que possibilita mais investimentos em serviços públicos para a população."
+      },
+      {
+        question: "Qual a principal diferença de direito entre uma Ação Ordinária (ON) e uma Ação Preferencial (PN)?",
+        answer: "A Ação Ordinária (ON) confere direito a voto nas assembleias da empresa, permitindo ao acionista influenciar decisões. A Ação Preferencial (PN) geralmente não dá direito a voto, mas tem prioridade no recebimento de dividendos e no reembolso do capital."
+      },
+      {
+        question: "Uma empresa que já fez seu IPO decide emitir mais ações para captar novos recursos. Como é chamada essa nova emissão e qual tipo de oferta (primária ou secundária) ela provavelmente será?",
+        answer: "É chamada de \"Follow on\". Provavelmente será uma oferta primária, pois os recursos captados entrarão diretamente na empresa para financiar seus projetos e aumentar o capital."
+      },
+      {
+        question: "O que são ETFs e por que são comparados a \"comprar um pacote de figurinhas\"?",
+        answer: "ETFs (Exchange Traded Funds) são fundos de investimento que replicam um índice de mercado e são negociados na bolsa como se fossem ações. São comparados a \"comprar um pacote de figurinhas\" porque, ao investir em um ETF, você adquire uma cesta diversificada de ativos (as \"figurinhas\" do índice) de uma só vez, sem precisar comprar cada ativo individualmente."
+      },
+      {
+        question: "Qual a diferença entre investir em FIIs de \"tijolo\" e de \"papel\"?",
+        answer: "FIIs de \"tijolo\" investem em imóveis físicos (como shoppings, escritórios, galpões). FIIs de \"papel\" investem em títulos do mercado imobiliário (como CRIs, LCIs, cotas de outros fundos)."
+      },
+      {
+        question: "Por que as LCI e LCA são consideradas mais atrativas que CDBs para pessoa física?",
+        answer: "Porque LCI (Letra de Crédito Imobiliário) e LCA (Letra de Crédito do Agronegócio) são isentas de Imposto de Renda para pessoa física, enquanto CDBs têm tributação regressiva."
       }
     ]
   },
@@ -289,11 +365,35 @@ const quizData = [
     questions: [
       {
         question: "Em qual cenário econômico o Tesouro Prefixado pode ser mais vantajoso que o Tesouro Selic, e por quê?",
-        answer: "O Tesouro Prefixado pode ser mais vantajoso em um cenário de expectativa de queda da Taxa Selic. Isso porque, ao prefixar a taxa de retorno, o investidor \"trava\" uma rentabilidade maior do que a Selic que possivelmente cairá no futuro."
+        answer: "O Tesouro Prefixado pode ser mais vantajoso em um cenário de expectativa de queda da Taxa Selic. Isso porque, ao prefixar a taxa de retorno, o investidor \"trava\" uma rentabilidade maior do que a Selic que possivelmente cairá no futuro. Se a Selic cair abaixo da taxa prefixada, o Prefixado terá um rendimento superior."
+      },
+      {
+        question: "Apesar de oferecerem potencial de maior rentabilidade, por que as Debêntures são consideradas investimentos de maior risco de crédito e menor liquidez comparadas a um CDB coberto pelo FGC?",
+        answer: "As Debêntures têm maior risco de crédito porque não possuem a garantia do FGC. Em caso de falência da empresa emissora, o investidor pode perder todo o capital. A liquidez é menor porque são negociadas no mercado secundário e nem sempre há compradores imediatos, dificultando o resgate rápido do dinheiro sem perdas. CDBs cobertos pelo FGC têm risco de crédito mitigado e geralmente maior liquidez."
       },
       {
         question: "Explique como a Taxa Selic atua como uma ferramenta do COPOM para controlar a inflação, detalhando o mecanismo por trás dessa relação.",
-        answer: "Quando a inflação está alta, o COPOM aumenta a Taxa Selic. Isso eleva o custo dos empréstimos e financiamentos para empresas e consumidores. Juros mais altos desestimulam o consumo e os investimentos. Com menor demanda por bens e serviços na economia e menos dinheiro em circulação, a tendência natural é que os preços se estabilizem ou diminuam, contendo a inflação."
+        answer: "Quando a inflação está alta, o COPOM aumenta a Taxa Selic. Isso eleva o custo dos empréstimos e financiamentos para empresas e consumidores. Juros mais altos desestimulam o consumo (pois o crédito fica mais caro e os empréstimos existentes pesam mais) e os investimentos (tornando o financiamento de projetos mais custoso). Com menor demanda por bens e serviços na economia e menos dinheiro em circulação, a tendência natural é que os preços se estabilizem ou diminuam, contendo a inflação. O inverso ocorre para estimular a economia em momentos de baixa inflação."
+      },
+      {
+        question: "Um investidor deseja ter uma renda mensal futura garantida para complementar sua aposentadoria e também planeja os estudos de seu filho. Quais títulos públicos do Tesouro Direto seriam os mais adequados para cada um desses objetivos e por quê?",
+        answer: "Para a aposentadoria: Tesouro RendA+. Ele é ideal para planejar a aposentadoria, pois garante uma rentabilidade acima da inflação (IPCA + juros prefixados) e distribui uma renda mensal por 20 anos, proporcionando um complemento financeiro. Para os estudos do filho: Tesouro Educa+. Semelhante ao RendA+, também garante retorno acima da inflação. Sua estrutura é pensada para planejamento educacional, distribuindo renda mensal por 5 anos (prazo estimado de um curso técnico ou superior) a partir de uma data escolhida."
+      },
+      {
+        question: "Se uma empresa na B3 se compromete com \"regras extras de transparência e gestão\", qual o impacto disso para os investidores e para a própria empresa?",
+        answer: "Para os investidores, o impacto é positivo, pois as regras de transparência e gestão (governança corporativa) reduzem o risco percebido do investimento e aumentam a confiança na empresa. Isso pode atrair mais investidores, aumentando a demanda pelas ações e, consequentemente, seu valor. Para a própria empresa, essa adesão demonstra compromisso com boas práticas, melhorando sua reputação no mercado, facilitando a captação de recursos e potencialmente resultando em um menor custo de capital."
+      },
+      {
+        question: "Analise um cenário onde um investidor possui R$ 100.000 e precisa decidir entre aplicar em Tesouro Selic (rendendo 100% do CDI) ou em um CDB que paga 115% do CDI, mas com carência de 2 anos. Quais fatores devem ser considerados nesta decisão?",
+        answer: "Fatores a considerar: 1) Necessidade de liquidez - se o investidor pode precisar do dinheiro em menos de 2 anos, o Tesouro Selic é mais adequado; 2) Tributação - CDB tem IR regressivo, que diminui com o tempo, favorecendo aplicações mais longas; 3) Risco de crédito - Tesouro tem menor risco que o banco emissor do CDB; 4) Garantia FGC - CDB está coberto até R$ 250.000; 5) Expectativa da Selic - se houver expectativa de alta da Selic, o adicional de 15% do CDB pode compensar a carência; 6) Diversificação - considerar não concentrar todo o valor em um único investimento."
+      },
+      {
+        question: "Como a correlação entre diferentes classes de ativos (Renda Fixa, Ações, FIIs) pode ser utilizada estrategicamente na construção de uma carteira de investimentos eficiente?",
+        answer: "A correlação mede como diferentes ativos se comportam em relação uns aos outros. Uma carteira eficiente busca ativos com baixa correlação ou correlação negativa para reduzir o risco total. Por exemplo: Renda Fixa geralmente tem correlação baixa ou negativa com ações - quando ações caem por incerteza econômica, investidores migram para RF. FIIs podem ter correlação moderada com ações e baixa com RF. Diversificar entre classes com diferentes correlações permite que quando uma classe está em baixa, outras possam estar estáveis ou em alta, reduzindo a volatilidade geral da carteira mantendo potencial de retorno."
+      },
+      {
+        question: "Explique como funciona o mecanismo de marcação a mercado em títulos públicos e qual seu impacto para investidores que precisam vender antes do vencimento.",
+        answer: "A marcação a mercado é o processo de atualizar diariamente o valor dos títulos conforme as condições de mercado. Quando as taxas de juros sobem, os preços dos títulos prefixados caem (e vice-versa), pois novos títulos oferecem rentabilidade maior. Para investidores que vendem antes do vencimento: podem ter ganhos se as taxas caíram desde a compra, ou perdas se as taxas subiram. O Tesouro Selic é menos afetado por isso pois acompanha a Selic atual. Este mecanismo explica por que títulos prefixados e IPCA+ têm maior volatilidade no curto prazo, mas garantem o rendimento contratado se mantidos até o vencimento."
       }
     ]
   }
