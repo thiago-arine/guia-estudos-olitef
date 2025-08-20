@@ -25,7 +25,7 @@ const flashCardData = [
     category: "Juros",
     cards: [
       {
-        front: "Qual a f��rmula dos Juros Simples e o que cada letra significa?",
+        front: "Qual a fórmula dos Juros Simples e o que cada letra significa?",
         back: "J=C⋅i⋅t. J = Juros, C = Capital, i = Taxa de Juros, t = Tempo."
       },
       {
@@ -431,6 +431,202 @@ const CompoundInterestCalculator: React.FC = () => {
         </div>
       )}
     </Card>
+  );
+};
+
+const FlashCardSection: React.FC = () => {
+  const [selectedCategory, setSelectedCategory] = useState(0);
+  const [currentCardIndex, setCurrentCardIndex] = useState(0);
+
+  const currentCategory = flashCardData[selectedCategory];
+  const currentCard = currentCategory.cards[currentCardIndex];
+
+  const nextCard = () => {
+    if (currentCardIndex < currentCategory.cards.length - 1) {
+      setCurrentCardIndex(currentCardIndex + 1);
+    }
+  };
+
+  const prevCard = () => {
+    if (currentCardIndex > 0) {
+      setCurrentCardIndex(currentCardIndex - 1);
+    }
+  };
+
+  const changeCategory = (categoryIndex: number) => {
+    setSelectedCategory(categoryIndex);
+    setCurrentCardIndex(0);
+  };
+
+  return (
+    <div className="space-y-6">
+      {/* Category Selection */}
+      <div className="flex flex-wrap gap-2">
+        {flashCardData.map((category, index) => (
+          <Button
+            key={index}
+            variant={selectedCategory === index ? "default" : "outline"}
+            onClick={() => changeCategory(index)}
+          >
+            {category.category}
+          </Button>
+        ))}
+      </div>
+
+      {/* Progress */}
+      <div className="space-y-2">
+        <div className="flex justify-between text-sm text-gray-600">
+          <span>{currentCategory.category}</span>
+          <span>{currentCardIndex + 1} de {currentCategory.cards.length}</span>
+        </div>
+        <Progress value={(currentCardIndex + 1) / currentCategory.cards.length * 100} />
+      </div>
+
+      {/* Flash Card */}
+      <div className="max-w-2xl mx-auto">
+        <FlashCard front={currentCard.front} back={currentCard.back} />
+      </div>
+
+      {/* Navigation */}
+      <div className="flex justify-center gap-4">
+        <Button
+          variant="outline"
+          onClick={prevCard}
+          disabled={currentCardIndex === 0}
+        >
+          ← Anterior
+        </Button>
+        <Button
+          variant="outline"
+          onClick={nextCard}
+          disabled={currentCardIndex === currentCategory.cards.length - 1}
+        >
+          Próximo →
+        </Button>
+      </div>
+    </div>
+  );
+};
+
+const QuizSection: React.FC = () => {
+  const [selectedDifficulty, setSelectedDifficulty] = useState(0);
+  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+  const [showAnswer, setShowAnswer] = useState(false);
+  const [userAnswers, setUserAnswers] = useState<string[]>([]);
+
+  const currentQuiz = quizData[selectedDifficulty];
+  const currentQuestion = currentQuiz.questions[currentQuestionIndex];
+
+  const nextQuestion = () => {
+    if (currentQuestionIndex < currentQuiz.questions.length - 1) {
+      setCurrentQuestionIndex(currentQuestionIndex + 1);
+      setShowAnswer(false);
+    }
+  };
+
+  const prevQuestion = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex(currentQuestionIndex - 1);
+      setShowAnswer(false);
+    }
+  };
+
+  const changeDifficulty = (difficultyIndex: number) => {
+    setSelectedDifficulty(difficultyIndex);
+    setCurrentQuestionIndex(0);
+    setShowAnswer(false);
+    setUserAnswers([]);
+  };
+
+  const handleAnswerChange = (answer: string) => {
+    const newAnswers = [...userAnswers];
+    newAnswers[currentQuestionIndex] = answer;
+    setUserAnswers(newAnswers);
+  };
+
+  return (
+    <div className="space-y-6">
+      {/* Difficulty Selection */}
+      <div className="flex flex-wrap gap-2">
+        {quizData.map((quiz, index) => (
+          <Button
+            key={index}
+            variant={selectedDifficulty === index ? "default" : "outline"}
+            onClick={() => changeDifficulty(index)}
+          >
+            {quiz.difficulty}
+          </Button>
+        ))}
+      </div>
+
+      {/* Progress */}
+      <div className="space-y-2">
+        <div className="flex justify-between text-sm text-gray-600">
+          <span>Nível: {currentQuiz.difficulty}</span>
+          <span>{currentQuestionIndex + 1} de {currentQuiz.questions.length}</span>
+        </div>
+        <Progress value={(currentQuestionIndex + 1) / currentQuiz.questions.length * 100} />
+      </div>
+
+      {/* Question Card */}
+      <Card className="p-6">
+        <CardHeader>
+          <CardTitle className="text-xl">
+            Pergunta {currentQuestionIndex + 1}
+          </CardTitle>
+        </CardHeader>
+        <CardContent className="space-y-4">
+          <p className="text-lg font-medium text-gray-800">
+            {currentQuestion.question}
+          </p>
+
+          <div className="space-y-4">
+            <textarea
+              className="w-full min-h-[120px] p-3 border rounded-lg resize-none"
+              placeholder="Digite sua resposta aqui..."
+              value={userAnswers[currentQuestionIndex] || ''}
+              onChange={(e) => handleAnswerChange(e.target.value)}
+            />
+
+            <div className="flex gap-2">
+              <Button
+                onClick={() => setShowAnswer(!showAnswer)}
+                variant="outline"
+              >
+                {showAnswer ? 'Ocultar' : 'Ver'} Resposta
+              </Button>
+            </div>
+
+            {showAnswer && (
+              <Card className="bg-green-50 border-green-200">
+                <CardContent className="p-4">
+                  <h4 className="font-semibold text-green-800 mb-2">Resposta Esperada:</h4>
+                  <p className="text-green-700">{currentQuestion.answer}</p>
+                </CardContent>
+              </Card>
+            )}
+          </div>
+        </CardContent>
+      </Card>
+
+      {/* Navigation */}
+      <div className="flex justify-center gap-4">
+        <Button
+          variant="outline"
+          onClick={prevQuestion}
+          disabled={currentQuestionIndex === 0}
+        >
+          ← Anterior
+        </Button>
+        <Button
+          variant="outline"
+          onClick={nextQuestion}
+          disabled={currentQuestionIndex === currentQuiz.questions.length - 1}
+        >
+          Próxima →
+        </Button>
+      </div>
+    </div>
   );
 };
 
