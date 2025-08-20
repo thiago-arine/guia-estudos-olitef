@@ -15,6 +15,8 @@ const sections = [
   { id: 'renda-fixa', label: 'Renda Fixa', icon: '🔒' },
   { id: 'renda-variavel', label: 'Renda Variável', icon: '📈' },
   { id: 'calculadora', label: 'Calculadora de Juros', icon: '➗' },
+  { id: 'flashcards', label: 'Flash Cards', icon: '🎯' },
+  { id: 'questionario', label: 'Questionário', icon: '📝' },
 ];
 
 interface InteractiveCardProps {
@@ -397,7 +399,7 @@ export default function Index() {
                 { title: "Tesouro Selic", content: "Pós-fixado, ideal para reserva de emergência." },
                 { title: "Tesouro Prefixado", content: "Rentabilidade definida na compra." },
                 { title: "Tesouro IPCA+", content: "Protege seu dinheiro da inflação." },
-                { title: "RendA+ e Educa+", content: "Focados em aposentadoria e educação, com pagamentos mensais no futuro." }
+                { title: "RendA+ e Educa+", content: "Focados em aposentadoria e educa��ão, com pagamentos mensais no futuro." }
               ]}
             />
 
