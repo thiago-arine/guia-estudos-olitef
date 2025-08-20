@@ -862,11 +862,33 @@ export default function Index() {
         <section id="calculadora" className="mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-2">Calculadora de Juros</h2>
           <p className="text-gray-500 mb-8">
-            Veja na prática a diferença entre juros simples e compostos. Preencha os campos abaixo e visualize o poder 
+            Veja na prática a diferença entre juros simples e compostos. Preencha os campos abaixo e visualize o poder
             da capitalização ao longo do tempo.
           </p>
-          
+
           <CompoundInterestCalculator />
+        </section>
+
+        {/* Flash Cards Section */}
+        <section id="flashcards" className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-800 mb-2">Flash Cards para Estudo</h2>
+          <p className="text-gray-500 mb-8">
+            Teste seus conhecimentos com nossos flash cards interativos. Clique nos cards para revelar as respostas
+            e navegue entre diferentes categorias para revisar os conceitos mais importantes.
+          </p>
+
+          <FlashCardSection />
+        </section>
+
+        {/* Questionário Section */}
+        <section id="questionario" className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-800 mb-2">Questionário Interativo</h2>
+          <p className="text-gray-500 mb-8">
+            Pratique com perguntas de diferentes níveis de dificuldade. Escreva suas respostas e compare com as
+            respostas esperadas para consolidar seu aprendizado.
+          </p>
+
+          <QuizSection />
         </section>
       </main>
     </div>
