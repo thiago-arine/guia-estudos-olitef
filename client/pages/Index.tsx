@@ -31,6 +31,14 @@ const flashCardData = [
       {
         front: "Qual a fórmula dos Juros Compostos e o que cada letra significa?",
         back: "M=C⋅(1+i)ⁿ. M = Montante, C = Capital, i = Taxa de Juros, n = Tempo."
+      },
+      {
+        front: "Por que os juros compostos são mais vantajosos que os simples?",
+        back: "Porque os juros compostos rendem sobre o valor acumulado (juros sobre juros), gerando crescimento exponencial, enquanto os simples rendem apenas sobre o capital inicial."
+      },
+      {
+        front: "O que significa \"Amortização\" em uma dívida?",
+        back: "Aplicar pagamentos extras ao principal da dívida para reduzir juros e o tempo de pagamento."
       }
     ]
   },
@@ -58,16 +66,40 @@ const flashCardData = [
         back: "O Comitê de Política Monetária (COPOM), 8 vezes por ano (a cada 45 dias)."
       },
       {
-        front: "Qual o limite de cobertura do FGC por CPF e por instituição financeira?",
-        back: "R$ 250.000,00 por CPF e por instituição financeira."
-      },
-      {
         front: "Por que os Títulos Públicos (Tesouro Direto) são considerados os investimentos mais seguros do Brasil?",
         back: "Porque são emitidos pelo governo brasileiro e têm o menor risco de crédito do país."
       },
       {
         front: "Qual Título Público é ideal para reserva de emergência e por quê?",
         back: "Tesouro Selic, pois rende diariamente conforme a Selic e tem alta liquidez para resgate."
+      },
+      {
+        front: "Qual a diferença entre Tesouro Prefixado e Tesouro IPCA+?",
+        back: "Tesouro Prefixado tem retorno conhecido antecipadamente. Tesouro IPCA+ tem parte da remuneração atrelada à inflação (IPCA) e parte prefixada."
+      },
+      {
+        front: "O que é um CDB?",
+        back: "Um título emitido por bancos, onde o investidor empresta dinheiro ao banco em troca de juros."
+      },
+      {
+        front: "Qual a principal diferença entre LCI/LCA e CDB para pessoa física?",
+        back: "LCI e LCA são isentas de Imposto de Renda para pessoa física, enquanto CDB não."
+      },
+      {
+        front: "O que é uma Debênture e qual seu principal risco em relação ao CDB?",
+        back: "É um título de dívida emitido por empresas. Principal risco: não é coberta pelo FGC."
+      },
+      {
+        front: "Quais as duas regras de rentabilidade da Poupança em relação à Taxa Selic Meta?",
+        back: "Se Selic Meta > 8,5% a.a., rende 0,5% a.m. + TR. Se Selic Meta ≤ 8,5% a.a., rende 70% da Selic Meta + TR."
+      },
+      {
+        front: "O que é o CDI e como se relaciona com a Taxa Selic?",
+        back: "Certificado de Depósito Interbancário. Taxa de referência para empréstimos entre bancos, geralmente próxima à Taxa Selic."
+      },
+      {
+        front: "O que é TR (Taxa Referencial)?",
+        back: "Uma taxa de referência utilizada para reajustes de poupança e alguns financiamentos."
       }
     ]
   },
@@ -87,12 +119,36 @@ const flashCardData = [
         back: "A Oferta Pública Inicial, o primeiro lançamento de ações de uma empresa no mercado."
       },
       {
+        front: "O que é um Follow on?",
+        back: "Uma nova emissão de ações de uma empresa que já tem capital aberto, após o IPO."
+      },
+      {
+        front: "Diferencie Oferta Primária de Oferta Secundária de ações.",
+        back: "Primária: recursos entram na empresa. Secundária: apenas troca de propriedade entre investidores, sem mudar o capital da empresa."
+      },
+      {
+        front: "O que o Ibovespa B3 mede?",
+        back: "O desempenho médio das ações das maiores e mais negociadas empresas na B3."
+      },
+      {
         front: "O que são FIIs e quais seus dois principais tipos de investimento?",
         back: "Fundos de Investimento Imobiliário. Investem em \"tijolos\" (imóveis físicos) ou em \"papel\" (títulos imobiliários)."
       },
       {
         front: "O que são ETFs?",
         back: "Fundos de investimento que replicam um índice e são negociados na bolsa como se fossem ações."
+      },
+      {
+        front: "Qual a vantagem de investir em BDRs?",
+        back: "Permitem investir em ações de empresas estrangeiras comprando-as na B3, sem precisar abrir conta no exterior."
+      },
+      {
+        front: "O que são Fiagros?",
+        back: "Fundos de Investimento nas Cadeias Produtivas Agroindustriais - fundos que aplicam em ativos do setor agroindustrial."
+      },
+      {
+        front: "O que é o IFIX?",
+        back: "Índice que mede a média dos preços dos maiores fundos imobiliários (FIIs) negociados na Bolsa."
       }
     ]
   },
@@ -110,6 +166,76 @@ const flashCardData = [
       {
         front: "O que o PIB mede?",
         back: "O valor total de todos os bens e serviços finais produzidos dentro de um país em um ano."
+      },
+      {
+        front: "O que é IGP-M?",
+        back: "Índice Geral de Preços – Mercado. Índice de inflação calculado pela FGV, frequentemente usado para reajustes de aluguéis."
+      },
+      {
+        front: "Como um PIB em crescimento afeta o mercado de ações?",
+        back: "PIB em crescimento indica economia aquecida, o que geralmente é positivo para as empresas e para o mercado de ações."
+      }
+    ]
+  },
+  {
+    category: "Riscos e Garantias",
+    cards: [
+      {
+        front: "O que é Risco de Crédito em investimentos?",
+        back: "Chance de não conseguir reaver o dinheiro investido (calote do emissor)."
+      },
+      {
+        front: "O que é Risco de Liquidez?",
+        back: "Dificuldade ou tempo necessário para converter o investimento em dinheiro disponível sem perdas."
+      },
+      {
+        front: "O que é Risco de Mercado?",
+        back: "Oscilação do preço do título no mercado secundário devido a mudanças nas taxas de juros ou condições econômicas."
+      },
+      {
+        front: "Qual o limite de cobertura do FGC por CPF e por instituição financeira?",
+        back: "R$ 250.000,00 por CPF e por instituição financeira."
+      },
+      {
+        front: "O que é o FGCOOP?",
+        back: "Fundo Garantidor do Cooperativismo de Crédito. Oferece garantia similar ao FGC para investimentos em cooperativas de crédito."
+      },
+      {
+        front: "Quais investimentos são cobertos pelo FGC?",
+        back: "CDB, LCI, LCA, poupança, RDB e depósitos em conta corrente, até R$ 250.000 por CPF/instituição."
+      },
+      {
+        front: "Por que as Debêntures têm maior risco que CDBs?",
+        back: "Porque não possuem a garantia do FGC. Em caso de falência da empresa emissora, o investidor pode perder todo o capital."
+      }
+    ]
+  },
+  {
+    category: "Títulos Específicos",
+    cards: [
+      {
+        front: "Para que serve o Tesouro Educa+?",
+        back: "Garante retorno acima da inflação (IPCA + juros prefixados) e distribui renda mensal por 5 anos após uma data escolhida, para auxiliar no planejamento de estudos."
+      },
+      {
+        front: "Para que serve o Tesouro RendA+?",
+        back: "Similar ao Educa+, ideal para planejar a aposentadoria. Distribui renda mensal por 20 anos, contribuindo como uma renda extra na aposentadoria."
+      },
+      {
+        front: "Quando é vantajoso investir no Tesouro Prefixado?",
+        back: "Quando há expectativa de queda da Taxa Selic, pois você \"trava\" uma rentabilidade maior do que a Selic que possivelmente cairá."
+      },
+      {
+        front: "Por que o Tesouro IPCA+ é ideal para objetivos de longo prazo?",
+        back: "Porque protege contra a inflação, garantindo que o poder de compra seja mantido ao longo do tempo."
+      },
+      {
+        front: "O que é LCI e qual sua principal vantagem?",
+        back: "Letra de Crédito Imobiliário. Principal vantagem: isenção de Imposto de Renda para pessoa física."
+      },
+      {
+        front: "O que é LCA e qual sua principal vantagem?",
+        back: "Letra de Crédito do Agronegócio. Principal vantagem: isenção de Imposto de Renda para pessoa física."
       }
     ]
   }
