@@ -49,8 +49,8 @@ const flashCardData = [
         front: "Qual a fórmula dos Juros Simples e o que cada letra significa?",
         back: (
           <>
-            <code className="font-mono">J = C × i × t.&nbsp;</code>
-            J = Juros, C = Capital, i = Taxa de Juros, t = Tempo.
+            <code className="font-mono">J = C × i × t.&nbsp;</code>J = Juros, C
+            = Capital, i = Taxa de Juros, t = Tempo.
           </>
         ),
       },
@@ -287,9 +287,7 @@ const quizData = [
       },
       {
         question: "Qual é a fórmula dos Juros Simples?",
-        answer: (
-          <code className="font-mono">J = C × i × t</code>
-        ),
+        answer: <code className="font-mono">J = C × i × t</code>,
       },
       {
         question:
@@ -352,7 +350,8 @@ const quizData = [
       },
       {
         question: 'O que significa "Amortização" em uma dívida?',
-        answer: "Aplicar pagamentos extras ao principal da dívida, diminuindo parcelas e juros.",
+        answer:
+          "Aplicar pagamentos extras ao principal da dívida, diminuindo parcelas e juros.",
       },
     ],
   },
@@ -483,7 +482,12 @@ interface FlashCardProps {
   onToggle: () => void;
 }
 
-const FlashCard: React.FC<FlashCardProps> = ({ front, back, isFlipped, onToggle }) => {
+const FlashCard: React.FC<FlashCardProps> = ({
+  front,
+  back,
+  isFlipped,
+  onToggle,
+}) => {
   return (
     <div
       className="relative w-full h-64 cursor-pointer perspective-1000"
@@ -596,7 +600,9 @@ const SectionNav: React.FC<{
 
       {/* Mobile Navigation */}
       <header className="lg:hidden mb-6">
-        <h1 className="text-2xl font-bold text-primary">Guia OLITEF - Nível 3 (2025)</h1>
+        <h1 className="text-2xl font-bold text-primary">
+          Guia OLITEF - Nível 3 (2025)
+        </h1>
         <select
           value={activeSection}
           onChange={(e) => onSectionChange(e.target.value)}
@@ -1218,8 +1224,7 @@ export default function Index() {
                 },
                 {
                   title: "Garantia",
-                  content:
-                    "Cobertura do FGC de até R$ 250 mil por CPF.",
+                  content: "Cobertura do FGC de até R$ 250 mil por CPF.",
                 },
               ]}
             />
