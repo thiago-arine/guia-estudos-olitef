@@ -411,7 +411,7 @@ const quizData = [
         question:
           "Uma empresa que já fez seu IPO decide emitir mais a��ões para captar novos recursos. Como é chamada essa nova emiss��o e qual tipo de oferta (primária ou secundária) ela provavelmente será?",
         answer:
-          'É chamada de "Follow on". Provavelmente será uma oferta primária, pois os recursos captados entrarão diretamente na empresa para financiar seus projetos e aumentar o capital.',
+          'É chamada de "Follow on". Provavelmente será uma oferta primária, pois os recursos captados entrar��o diretamente na empresa para financiar seus projetos e aumentar o capital.',
       },
       {
         question:
@@ -911,14 +911,15 @@ const QuizSection: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       {/* Difficulty Selection */}
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 justify-center">
         {quizData.map((quiz, index) => (
           <Button
             key={index}
             variant={selectedDifficulty === index ? "default" : "outline"}
             onClick={() => changeDifficulty(index)}
+            className="text-sm px-3 sm:px-4"
           >
             {quiz.difficulty}
           </Button>
@@ -927,9 +928,9 @@ const QuizSection: React.FC = () => {
 
       {/* Progress */}
       <div className="space-y-2">
-        <div className="flex justify-between text-sm text-gray-600">
-          <span>Nível: {currentQuiz.difficulty}</span>
-          <span>
+        <div className="flex justify-between text-xs sm:text-sm text-gray-600">
+          <span className="truncate pr-2">Nível: {currentQuiz.difficulty}</span>
+          <span className="whitespace-nowrap">
             {currentQuestionIndex + 1} de {currentQuiz.questions.length}
           </span>
         </div>
@@ -941,14 +942,14 @@ const QuizSection: React.FC = () => {
       </div>
 
       {/* Question Card */}
-      <Card className="p-6">
+      <Card className="p-4 sm:p-6">
         <CardHeader>
-          <CardTitle className="text-xl">
+          <CardTitle className="text-lg sm:text-xl">
             Pergunta {currentQuestionIndex + 1}
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <p className="text-lg font-medium text-gray-800">
+          <p className="text-base sm:text-lg font-medium text-gray-800">
             {currentQuestion.question}
           </p>
 
