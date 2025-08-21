@@ -507,7 +507,9 @@ const FlashCard: React.FC<FlashCardProps> = ({
               <div className="text-xs sm:text-sm text-blue-600 font-semibold mb-2">
                 PERGUNTA
               </div>
-              <p className="text-sm sm:text-base text-gray-800 font-medium leading-snug">{front}</p>
+              <p className="text-sm sm:text-base text-gray-800 font-medium leading-snug">
+                {front}
+              </p>
               <div className="text-xs text-gray-500 mt-2 sm:mt-4">
                 Clique para ver a resposta
               </div>
@@ -522,7 +524,9 @@ const FlashCard: React.FC<FlashCardProps> = ({
               <div className="text-xs sm:text-sm text-green-600 font-semibold mb-2">
                 RESPOSTA
               </div>
-              <div className="text-sm sm:text-base text-gray-800 font-medium leading-snug">{back}</div>
+              <div className="text-sm sm:text-base text-gray-800 font-medium leading-snug">
+                {back}
+              </div>
               <div className="text-xs text-gray-500 mt-2 sm:mt-4">
                 Clique para voltar à pergunta
               </div>
@@ -709,7 +713,9 @@ const CompoundInterestCalculator: React.FC = () => {
       <div className="grid lg:grid-cols-2 gap-6 items-end">
         <div className="space-y-4">
           <div>
-            <Label htmlFor="capital" className="text-sm sm:text-base">Capital Inicial (R$)</Label>
+            <Label htmlFor="capital" className="text-sm sm:text-base">
+              Capital Inicial (R$)
+            </Label>
             <Input
               id="capital"
               type="number"
@@ -720,7 +726,9 @@ const CompoundInterestCalculator: React.FC = () => {
             />
           </div>
           <div>
-            <Label htmlFor="rate" className="text-sm sm:text-base">Taxa de Juros (% ao Mês)</Label>
+            <Label htmlFor="rate" className="text-sm sm:text-base">
+              Taxa de Juros (% ao Mês)
+            </Label>
             <Input
               id="rate"
               type="number"
@@ -731,7 +739,9 @@ const CompoundInterestCalculator: React.FC = () => {
             />
           </div>
           <div>
-            <Label htmlFor="time" className="text-sm sm:text-base">Tempo (Meses)</Label>
+            <Label htmlFor="time" className="text-sm sm:text-base">
+              Tempo (Meses)
+            </Label>
             <Input
               id="time"
               type="number"
@@ -741,16 +751,23 @@ const CompoundInterestCalculator: React.FC = () => {
               className="text-base"
             />
           </div>
-          <Button onClick={calculate} className="w-full font-semibold text-base py-3">
+          <Button
+            onClick={calculate}
+            className="w-full font-semibold text-base py-3"
+          >
             Calcular
           </Button>
         </div>
 
         <div className="bg-blue-50 p-4 sm:p-6 rounded-lg text-center">
-          <h4 className="font-bold text-base sm:text-lg text-blue-800 mb-2">Resultados</h4>
+          <h4 className="font-bold text-base sm:text-lg text-blue-800 mb-2">
+            Resultados
+          </h4>
           <div className="space-y-3">
             <div>
-              <p className="text-xs sm:text-sm text-gray-600">Montante Juros Simples</p>
+              <p className="text-xs sm:text-sm text-gray-600">
+                Montante Juros Simples
+              </p>
               <p className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 break-words">
                 {results
                   ? `R$ ${results.simple.toFixed(2).replace(".", ",")}`
@@ -758,7 +775,9 @@ const CompoundInterestCalculator: React.FC = () => {
               </p>
             </div>
             <div>
-              <p className="text-xs sm:text-sm text-gray-600">Montante Juros Compostos</p>
+              <p className="text-xs sm:text-sm text-gray-600">
+                Montante Juros Compostos
+              </p>
               <p className="text-lg sm:text-xl lg:text-2xl font-bold text-blue-700 break-words">
                 {results
                   ? `R$ ${results.compound.toFixed(2).replace(".", ",")}`
@@ -1167,7 +1186,9 @@ export default function Index() {
                   </p>
                   <p>
                     <strong>Compostos:</strong>{" "}
-                    <code className="font-mono break-words">M = C × (1 + i)ⁿ</code>
+                    <code className="font-mono break-words">
+                      M = C × (1 + i)ⁿ
+                    </code>
                   </p>
                 </div>
               </CardContent>
@@ -1195,7 +1216,9 @@ export default function Index() {
 
         {/* Renda Fixa Section */}
         <section id="renda-fixa" className="mb-12 md:mb-16">
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">Renda Fixa</h2>
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">
+            Renda Fixa
+          </h2>
           <p className="text-sm sm:text-base text-gray-500 mb-6 lg:mb-8">
             Nesta modalidade, você "empresta" seu dinheiro para uma instituição
             (governo, banco ou empresa) e recebe uma remuneração com regras
