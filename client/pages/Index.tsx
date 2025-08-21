@@ -409,7 +409,7 @@ const quizData = [
       },
       {
         question:
-          "Uma empresa que já fez seu IPO decide emitir mais a��ões para captar novos recursos. Como é chamada essa nova emissão e qual tipo de oferta (primária ou secundária) ela provavelmente será?",
+          "Uma empresa que já fez seu IPO decide emitir mais a��ões para captar novos recursos. Como é chamada essa nova emiss��o e qual tipo de oferta (primária ou secundária) ela provavelmente será?",
         answer:
           'É chamada de "Follow on". Provavelmente será uma oferta primária, pois os recursos captados entrarão diretamente na empresa para financiar seus projetos e aumentar o capital.',
       },
@@ -1340,7 +1340,7 @@ export default function Index() {
             Calculadora de Juros
           </h2>
           <p className="text-sm sm:text-base text-gray-500 mb-6 lg:mb-8">
-            Veja na prática a diferença entre juros simples e compostos.
+            Veja na prática a diferen��a entre juros simples e compostos.
             Preencha os campos abaixo e visualize o poder da capitalização ao
             longo do tempo.
           </p>
@@ -1393,7 +1393,7 @@ export default function Index() {
                 <CardTitle className="text-lg sm:text-xl text-primary flex items-center gap-2">
                   📚 Prova 2024
                 </CardTitle>
-                <CardDescription>
+                <CardDescription className="text-sm sm:text-base">
                   Prova e Gabarito do Nível 3 (1º Ano do Ensino Médio) - OLITEF
                   2024
                 </CardDescription>
