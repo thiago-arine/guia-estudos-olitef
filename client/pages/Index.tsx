@@ -409,7 +409,7 @@ const quizData = [
       },
       {
         question:
-          "Uma empresa que já fez seu IPO decide emitir mais ações para captar novos recursos. Como é chamada essa nova emissão e qual tipo de oferta (primária ou secundária) ela provavelmente será?",
+          "Uma empresa que já fez seu IPO decide emitir mais a��ões para captar novos recursos. Como é chamada essa nova emissão e qual tipo de oferta (primária ou secundária) ela provavelmente será?",
         answer:
           'É chamada de "Follow on". Provavelmente será uma oferta primária, pois os recursos captados entrarão diretamente na empresa para financiar seus projetos e aumentar o capital.',
       },
@@ -1263,7 +1263,7 @@ export default function Index() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             <InteractiveCard
-              title="Ações"
+              title="Aç��es"
               description="Pequenas partes de uma empresa. Ao comprar, você se torna sócio."
               details={[
                 {
@@ -1358,6 +1358,102 @@ export default function Index() {
           </p>
 
           <QuizSection />
+        </section>
+
+        {/* Provas Anteriores Section */}
+        <section id="provas-anteriores" className="mb-16">
+          <h2 className="text-3xl font-bold text-gray-800 mb-2">
+            Acesso a Provas Anteriores
+          </h2>
+          <p className="text-gray-500 mb-8">
+            Estude com materiais e provas de edições passadas da OLITEF.
+            Utilize estes recursos para praticar e se familiarizar com o formato das questões.
+          </p>
+
+          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
+            <Card className="p-6 hover:shadow-lg transition-shadow duration-200">
+              <CardHeader>
+                <CardTitle className="text-xl text-primary flex items-center gap-2">
+                  📚 Prova 2024
+                </CardTitle>
+                <CardDescription>
+                  Prova e Gabarito do Nível 3 (1º Ano do Ensino Médio) - OLITEF 2024
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Acesse a prova completa com gabarito da edição anterior para praticar
+                  e conhecer o estilo das questões.
+                </p>
+                <Button
+                  className="w-full"
+                  onClick={() => window.open('https://upmat-gestao.s3.us-west-2.amazonaws.com/Olitef/2024/Provas+e+Gabaritos/Prova+e+Gabarito+N%C3%ADvel+3+(1%C2%BA+Ano+do+Ensino+M%C3%A9dio)+-+OLITEF+2024.pdf', '_blank')}
+                >
+                  Baixar Prova 2024
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 hover:shadow-lg transition-shadow duration-200">
+              <CardHeader>
+                <CardTitle className="text-xl text-primary flex items-center gap-2">
+                  🎓 Curso B3
+                </CardTitle>
+                <CardDescription>
+                  Comece por aqui para investir - Curso oficial da B3
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Curso gratuito e oficial da B3 que ensina os fundamentos
+                  dos investimentos no mercado brasileiro.
+                </p>
+                <Button
+                  className="w-full"
+                  onClick={() => window.open('https://edu.b3.com.br/w/comece-por-aqui-para-investir-curso', '_blank')}
+                >
+                  Acessar Curso B3
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 hover:shadow-lg transition-shadow duration-200">
+              <CardHeader>
+                <CardTitle className="text-xl text-primary flex items-center gap-2">
+                  📖 Material Extra
+                </CardTitle>
+                <CardDescription>
+                  Conteúdos OLITEF - Material de Estudo Complementar
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Material complementar com conceitos fundamentais de investimentos
+                  e economia, focado nos produtos do mercado financeiro brasileiro.
+                </p>
+                <Button
+                  className="w-full"
+                  onClick={() => window.open('https://cdn.builder.io/o/assets%2F776fb6a9bcd04c3cad60f1ae1f8d4051%2Fe9a26167341446feb6ef1d6f804f3c13?alt=media&token=d61da3d0-08b1-4911-aa4a-0f433749aa01&apiKey=776fb6a9bcd04c3cad60f1ae1f8d4051', '_blank')}
+                >
+                  Baixar Material Extra
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="mt-6 p-6 bg-blue-50 border-blue-200">
+            <CardHeader>
+              <CardTitle className="text-lg text-blue-800">💡 Dica de Estudo</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <p className="text-blue-700">
+                Recomendamos começar com o <strong>Curso B3</strong> para uma base sólida,
+                depois estudar o <strong>Material Extra</strong> para aprofundar os conceitos,
+                e finalizar praticando com a <strong>Prova 2024</strong> para se familiarizar
+                com o formato e nível das questões.
+              </p>
+            </CardContent>
+          </Card>
         </section>
       </main>
     </div>
