@@ -253,6 +253,7 @@ const flashCardData = [
         back: 'Quando há expectativa de queda da Taxa Selic, pois você "trava" uma rentabilidade maior do que a Selic que possivelmente cairá.',
       },
       {
+
         front: "Por que o Tesouro IPCA+ é ideal para objetivos de longo prazo?",
         back: "Porque protege contra a inflação, garantindo que o poder de compra seja mantido ao longo do tempo.",
       },
@@ -328,7 +329,7 @@ const quizData = [
         answer: "Tesouro Selic.",
       },
       {
-        question: "O que são a��ões?",
+        question: "O que são ações?",
         answer:
           "Títulos que representam uma parte do capital social de uma sociedade anônima (empresa).",
       },
