@@ -1388,9 +1388,9 @@ export default function Index() {
           </p>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-            <Card className="p-6 hover:shadow-lg transition-shadow duration-200">
+            <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow duration-200">
               <CardHeader>
-                <CardTitle className="text-xl text-primary flex items-center gap-2">
+                <CardTitle className="text-lg sm:text-xl text-primary flex items-center gap-2">
                   📚 Prova 2024
                 </CardTitle>
                 <CardDescription>
