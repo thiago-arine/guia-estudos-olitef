@@ -176,14 +176,6 @@ const flashCardData = [
         front: "Qual a vantagem de investir em BDRs?",
         back: "Permitem investir em ações de empresas estrangeiras comprando-as na B3, sem precisar abrir conta no exterior.",
       },
-      {
-        front: "O que são Fiagros?",
-        back: "Fundos de Investimento nas Cadeias Produtivas Agroindustriais - fundos que aplicam em ativos do setor agroindustrial.",
-      },
-      {
-        front: "O que é o IFIX?",
-        back: "Índice que mede a média dos preços dos maiores fundos imobiliários (FIIs) negociados na Bolsa.",
-      },
     ],
   },
   {
