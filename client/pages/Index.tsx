@@ -1217,7 +1217,7 @@ export default function Index() {
                 {
                   title: "Garantia",
                   content:
-                    "Cobertura do FGC de até R$ 250 mil por CPF/instituição.",
+                    "Cobertura do FGC de até R$ 250 mil por CPF.",
                 },
               ]}
             />
