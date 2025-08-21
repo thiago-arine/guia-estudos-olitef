@@ -409,7 +409,7 @@ const quizData = [
       },
       {
         question:
-          "Uma empresa que já fez seu IPO decide emitir mais a��ões para captar novos recursos. Como é chamada essa nova emissão e qual tipo de oferta (primária ou secundária) ela provavelmente será?",
+          "Uma empresa que já fez seu IPO decide emitir mais ações para captar novos recursos. Como é chamada essa nova emissão e qual tipo de oferta (primária ou secundária) ela provavelmente será?",
         answer:
           'É chamada de "Follow on". Provavelmente será uma oferta primária, pois os recursos captados entrarão diretamente na empresa para financiar seus projetos e aumentar o capital.',
       },
@@ -450,7 +450,7 @@ const quizData = [
       },
       {
         question:
-          "Explique como a Taxa Selic atua como uma ferramenta do COPOM para controlar a inflação, detalhando o mecanismo por trás dessa relaç��o.",
+          "Explique como a Taxa Selic atua como uma ferramenta do COPOM para controlar a inflação, detalhando o mecanismo por trás dessa relação.",
         answer:
           "Quando a inflação está alta, o COPOM aumenta a Taxa Selic. Isso eleva o custo dos empréstimos e financiamentos para empresas e consumidores. Juros mais altos desestimulam o consumo (pois o crédito fica mais caro e os empréstimos existentes pesam mais) e os investimentos (tornando o financiamento de projetos mais custoso). Com menor demanda por bens e serviços na economia e menos dinheiro em circulação, a tendência natural é que os preços se estabilizem ou diminuam, contendo a inflação. O inverso ocorre para estimular a economia em momentos de baixa inflação.",
       },
@@ -491,7 +491,7 @@ const FlashCard: React.FC<FlashCardProps> = ({
 }) => {
   return (
     <div
-      className="relative w-full h-64 cursor-pointer perspective-1000"
+      className="relative w-full h-48 sm:h-56 md:h-64 cursor-pointer perspective-1000"
       onClick={onToggle}
     >
       <div
@@ -502,13 +502,15 @@ const FlashCard: React.FC<FlashCardProps> = ({
       >
         {/* Front */}
         <div className="absolute inset-0 w-full h-full backface-hidden">
-          <Card className="h-full flex items-center justify-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200">
+          <Card className="h-full flex items-center justify-center p-3 sm:p-4 md:p-6 bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-blue-200">
             <div className="text-center">
-              <div className="text-sm text-blue-600 font-semibold mb-2">
+              <div className="text-xs sm:text-sm text-blue-600 font-semibold mb-2">
                 PERGUNTA
               </div>
-              <p className="text-gray-800 font-medium">{front}</p>
-              <div className="text-xs text-gray-500 mt-4">
+              <p className="text-sm sm:text-base text-gray-800 font-medium leading-snug">
+                {front}
+              </p>
+              <div className="text-xs text-gray-500 mt-2 sm:mt-4">
                 Clique para ver a resposta
               </div>
             </div>
@@ -517,13 +519,15 @@ const FlashCard: React.FC<FlashCardProps> = ({
 
         {/* Back */}
         <div className="absolute inset-0 w-full h-full backface-hidden rotate-y-180">
-          <Card className="h-full flex items-center justify-center p-6 bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-200">
+          <Card className="h-full flex items-center justify-center p-3 sm:p-4 md:p-6 bg-gradient-to-br from-green-50 to-green-100 border-2 border-green-200">
             <div className="text-center">
-              <div className="text-sm text-green-600 font-semibold mb-2">
+              <div className="text-xs sm:text-sm text-green-600 font-semibold mb-2">
                 RESPOSTA
               </div>
-              <div className="text-gray-800 font-medium">{back}</div>
-              <div className="text-xs text-gray-500 mt-4">
+              <div className="text-sm sm:text-base text-gray-800 font-medium leading-snug">
+                {back}
+              </div>
+              <div className="text-xs text-gray-500 mt-2 sm:mt-4">
                 Clique para voltar à pergunta
               </div>
             </div>
@@ -573,8 +577,8 @@ const SectionNav: React.FC<{
   return (
     <>
       {/* Desktop Sidebar */}
-      <aside className="w-64 bg-white/80 backdrop-blur-sm border-r border-gray-200/80 p-6 fixed h-full hidden lg:block">
-        <h1 className="text-2xl font-bold text-primary mb-8">
+      <aside className="w-64 bg-white/80 backdrop-blur-sm border-r border-gray-200/80 p-4 xl:p-6 fixed h-full hidden lg:block overflow-y-auto">
+        <h1 className="text-xl xl:text-2xl font-bold text-primary mb-6 xl:mb-8">
           Guia OLITEF - Nível 3 (2025)
         </h1>
         <nav>
@@ -584,14 +588,14 @@ const SectionNav: React.FC<{
                 <button
                   onClick={() => onSectionChange(section.id)}
                   className={cn(
-                    "flex items-center py-2 px-4 rounded-lg text-gray-700 w-full text-left transition-all duration-200",
+                    "flex items-center py-2 px-3 xl:px-4 rounded-lg text-gray-700 w-full text-left transition-all duration-200 text-sm xl:text-base",
                     "hover:bg-primary hover:text-white",
                     activeSection === section.id &&
                       "bg-primary text-white translate-x-1",
                   )}
                 >
-                  <span>{section.icon}</span>
-                  <span className="ml-3">{section.label}</span>
+                  <span className="text-base xl:text-lg">{section.icon}</span>
+                  <span className="ml-2 xl:ml-3">{section.label}</span>
                 </button>
               </li>
             ))}
@@ -600,18 +604,18 @@ const SectionNav: React.FC<{
       </aside>
 
       {/* Mobile Navigation */}
-      <header className="lg:hidden mb-6">
-        <h1 className="text-2xl font-bold text-primary">
+      <header className="lg:hidden mb-4 md:mb-6 px-2">
+        <h1 className="text-xl sm:text-2xl font-bold text-primary text-center mb-4">
           Guia OLITEF - Nível 3 (2025)
         </h1>
         <select
           value={activeSection}
           onChange={(e) => onSectionChange(e.target.value)}
-          className="mt-4 w-full p-2 border rounded-lg bg-white"
+          className="w-full p-3 border rounded-lg bg-white text-base shadow-sm"
         >
           {sections.map((section) => (
             <option key={section.id} value={section.id}>
-              {section.label}
+              {section.icon} {section.label}
             </option>
           ))}
         </select>
@@ -689,64 +693,92 @@ const CompoundInterestCalculator: React.FC = () => {
           callback: function (value: any) {
             return "R$ " + value.toLocaleString("pt-BR");
           },
+          font: {
+            size: window.innerWidth < 768 ? 10 : 12,
+          },
+        },
+      },
+      x: {
+        ticks: {
+          font: {
+            size: window.innerWidth < 768 ? 10 : 12,
+          },
         },
       },
     },
   };
 
   return (
-    <Card className="p-8">
-      <div className="grid md:grid-cols-2 gap-6 items-end">
+    <Card className="p-4 sm:p-6 lg:p-8">
+      <div className="grid lg:grid-cols-2 gap-6 items-end">
         <div className="space-y-4">
           <div>
-            <Label htmlFor="capital">Capital Inicial (R$)</Label>
+            <Label htmlFor="capital" className="text-sm sm:text-base">
+              Capital Inicial (R$)
+            </Label>
             <Input
               id="capital"
               type="number"
               value={capital}
               onChange={(e) => setCapital(Number(e.target.value))}
               placeholder="1000"
+              className="text-base"
             />
           </div>
           <div>
-            <Label htmlFor="rate">Taxa de Juros (% ao Mês)</Label>
+            <Label htmlFor="rate" className="text-sm sm:text-base">
+              Taxa de Juros (% ao Mês)
+            </Label>
             <Input
               id="rate"
               type="number"
               value={rate}
               onChange={(e) => setRate(Number(e.target.value))}
               placeholder="1"
+              className="text-base"
             />
           </div>
           <div>
-            <Label htmlFor="time">Tempo (Meses)</Label>
+            <Label htmlFor="time" className="text-sm sm:text-base">
+              Tempo (Meses)
+            </Label>
             <Input
               id="time"
               type="number"
               value={time}
               onChange={(e) => setTime(Number(e.target.value))}
               placeholder="12"
+              className="text-base"
             />
           </div>
-          <Button onClick={calculate} className="w-full font-semibold">
+          <Button
+            onClick={calculate}
+            className="w-full font-semibold text-base py-3"
+          >
             Calcular
           </Button>
         </div>
 
-        <div className="bg-blue-50 p-6 rounded-lg text-center">
-          <h4 className="font-bold text-lg text-blue-800 mb-2">Resultados</h4>
-          <div className="space-y-2">
+        <div className="bg-blue-50 p-4 sm:p-6 rounded-lg text-center">
+          <h4 className="font-bold text-base sm:text-lg text-blue-800 mb-2">
+            Resultados
+          </h4>
+          <div className="space-y-3">
             <div>
-              <p className="text-sm text-gray-600">Montante Juros Simples</p>
-              <p className="text-2xl font-bold text-gray-800">
+              <p className="text-xs sm:text-sm text-gray-600">
+                Montante Juros Simples
+              </p>
+              <p className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-800 break-words">
                 {results
                   ? `R$ ${results.simple.toFixed(2).replace(".", ",")}`
                   : "R$ 0,00"}
               </p>
             </div>
             <div>
-              <p className="text-sm text-gray-600">Montante Juros Compostos</p>
-              <p className="text-2xl font-bold text-blue-700">
+              <p className="text-xs sm:text-sm text-gray-600">
+                Montante Juros Compostos
+              </p>
+              <p className="text-lg sm:text-xl lg:text-2xl font-bold text-blue-700 break-words">
                 {results
                   ? `R$ ${results.compound.toFixed(2).replace(".", ",")}`
                   : "R$ 0,00"}
@@ -757,8 +789,8 @@ const CompoundInterestCalculator: React.FC = () => {
       </div>
 
       {chartData && (
-        <div className="mt-8">
-          <div className="relative w-full max-w-2xl mx-auto h-80">
+        <div className="mt-6 sm:mt-8">
+          <div className="relative w-full max-w-2xl mx-auto h-64 sm:h-80">
             <Bar data={chartData} options={chartOptions} />
           </div>
         </div>
@@ -800,14 +832,15 @@ const FlashCardSection: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       {/* Category Selection */}
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 justify-center">
         {flashCardData.map((category, index) => (
           <Button
             key={index}
             variant={selectedCategory === index ? "default" : "outline"}
             onClick={() => changeCategory(index)}
+            className="text-xs sm:text-sm px-2 sm:px-4 py-1 sm:py-2"
           >
             {category.category}
           </Button>
@@ -816,9 +849,9 @@ const FlashCardSection: React.FC = () => {
 
       {/* Progress */}
       <div className="space-y-2">
-        <div className="flex justify-between text-sm text-gray-600">
-          <span>{currentCategory.category}</span>
-          <span>
+        <div className="flex justify-between text-xs sm:text-sm text-gray-600">
+          <span className="truncate pr-2">{currentCategory.category}</span>
+          <span className="whitespace-nowrap">
             {currentCardIndex + 1} de {currentCategory.cards.length}
           </span>
         </div>
@@ -828,7 +861,7 @@ const FlashCardSection: React.FC = () => {
       </div>
 
       {/* Flash Card */}
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-2xl mx-auto px-2">
         <FlashCard
           front={currentCard.front}
           back={currentCard.back}
@@ -838,11 +871,12 @@ const FlashCardSection: React.FC = () => {
       </div>
 
       {/* Navigation */}
-      <div className="flex justify-center gap-4">
+      <div className="flex justify-center gap-2 sm:gap-4 px-2">
         <Button
           variant="outline"
           onClick={prevCard}
           disabled={currentCardIndex === 0}
+          className="text-sm px-3 sm:px-4"
         >
           ← Anterior
         </Button>
@@ -850,6 +884,7 @@ const FlashCardSection: React.FC = () => {
           variant="outline"
           onClick={nextCard}
           disabled={currentCardIndex === currentCategory.cards.length - 1}
+          className="text-sm px-3 sm:px-4"
         >
           Próximo →
         </Button>
@@ -895,14 +930,15 @@ const QuizSection: React.FC = () => {
   };
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-4 sm:space-y-6">
       {/* Difficulty Selection */}
-      <div className="flex flex-wrap gap-2">
+      <div className="flex flex-wrap gap-2 justify-center">
         {quizData.map((quiz, index) => (
           <Button
             key={index}
             variant={selectedDifficulty === index ? "default" : "outline"}
             onClick={() => changeDifficulty(index)}
+            className="text-sm px-3 sm:px-4"
           >
             {quiz.difficulty}
           </Button>
@@ -911,9 +947,9 @@ const QuizSection: React.FC = () => {
 
       {/* Progress */}
       <div className="space-y-2">
-        <div className="flex justify-between text-sm text-gray-600">
-          <span>Nível: {currentQuiz.difficulty}</span>
-          <span>
+        <div className="flex justify-between text-xs sm:text-sm text-gray-600">
+          <span className="truncate pr-2">Nível: {currentQuiz.difficulty}</span>
+          <span className="whitespace-nowrap">
             {currentQuestionIndex + 1} de {currentQuiz.questions.length}
           </span>
         </div>
@@ -925,20 +961,20 @@ const QuizSection: React.FC = () => {
       </div>
 
       {/* Question Card */}
-      <Card className="p-6">
+      <Card className="p-4 sm:p-6">
         <CardHeader>
-          <CardTitle className="text-xl">
+          <CardTitle className="text-lg sm:text-xl">
             Pergunta {currentQuestionIndex + 1}
           </CardTitle>
         </CardHeader>
         <CardContent className="space-y-4">
-          <p className="text-lg font-medium text-gray-800">
+          <p className="text-base sm:text-lg font-medium text-gray-800">
             {currentQuestion.question}
           </p>
 
           <div className="space-y-4">
             <textarea
-              className="w-full min-h-[120px] p-3 border rounded-lg resize-none"
+              className="w-full min-h-[100px] sm:min-h-[120px] p-3 border rounded-lg resize-none text-sm sm:text-base"
               placeholder="Digite sua resposta aqui..."
               value={userAnswers[currentQuestionIndex] || ""}
               onChange={(e) => handleAnswerChange(e.target.value)}
@@ -948,6 +984,7 @@ const QuizSection: React.FC = () => {
               <Button
                 onClick={() => setShowAnswer(!showAnswer)}
                 variant="outline"
+                className="text-sm sm:text-base"
               >
                 {showAnswer ? "Ocultar" : "Ver"} Resposta
               </Button>
@@ -1092,17 +1129,17 @@ export default function Index() {
         onSectionChange={scrollToSection}
       />
 
-      <main className="flex-1 lg:ml-64 p-6 md:p-10">
+      <main className="flex-1 lg:ml-64 p-3 sm:p-4 md:p-6 lg:p-8 xl:p-10">
         {/* Início Section */}
-        <section id="inicio" className="mb-16">
-          <Card className="p-8">
+        <section id="inicio" className="mb-12 md:mb-16">
+          <Card className="p-4 sm:p-6 lg:p-8">
             <CardHeader>
-              <CardTitle className="text-3xl font-bold text-gray-800">
+              <CardTitle className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800">
                 Bem-vindo ao Guia para a OLITEF 2025
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                 Este guia foi criado para transformar o complexo mundo dos
                 investimentos em um material de estudo acessível e interativo.
                 Aqui, você encontrará os conceitos essenciais para começar sua
@@ -1117,52 +1154,54 @@ export default function Index() {
         </section>
 
         {/* Fundamentos Section */}
-        <section id="fundamentos" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">
+        <section id="fundamentos" className="mb-12 md:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">
             Fundamentos Econômicos
           </h2>
-          <p className="text-gray-500 mb-8">
+          <p className="text-sm sm:text-base text-gray-500 mb-6 lg:mb-8">
             Entender estes conceitos é o primeiro passo para tomar decisões de
             investimento mais inteligentes. Eles formam a base sobre a qual o
             mercado financeiro opera e influenciam diretamente a rentabilidade
             de seus ativos.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-6">
-            <Card className="p-6">
+          <div className="grid lg:grid-cols-2 gap-4 sm:gap-6 mb-6">
+            <Card className="p-4 sm:p-6">
               <CardHeader>
-                <CardTitle className="text-xl text-primary">
+                <CardTitle className="text-lg sm:text-xl text-primary">
                   Juros Simples vs. Compostos
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-4">
                   A base de qualquer rendimento. Juros simples rendem sobre o
                   valor inicial, enquanto juros compostos rendem sobre o valor
                   acumulado (juros sobre juros), gerando um crescimento
                   exponencial.
                 </p>
-                <div className="text-sm bg-blue-50 p-3 rounded-lg space-y-1">
+                <div className="text-xs sm:text-sm bg-blue-50 p-3 rounded-lg space-y-1">
                   <p>
                     <strong>Simples:</strong>{" "}
-                    <code className="font-mono">J = C × i × t</code>
+                    <code className="font-mono break-words">J = C × i × t</code>
                   </p>
                   <p>
                     <strong>Compostos:</strong>{" "}
-                    <code className="font-mono">M = C × (1 + i)ⁿ</code>
+                    <code className="font-mono break-words">
+                      M = C × (1 + i)ⁿ
+                    </code>
                   </p>
                 </div>
               </CardContent>
             </Card>
 
-            <Card className="p-6">
+            <Card className="p-4 sm:p-6">
               <CardHeader>
-                <CardTitle className="text-xl text-primary">
+                <CardTitle className="text-lg sm:text-xl text-primary">
                   PIB (Produto Interno Bruto)
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600">
+                <p className="text-sm sm:text-base text-gray-600">
                   Mede a soma de todos os bens e serviços produzidos no país. Um
                   PIB em crescimento indica uma economia aquecida, o que
                   geralmente é positivo para as empresas e, consequentemente,
@@ -1176,16 +1215,18 @@ export default function Index() {
         </section>
 
         {/* Renda Fixa Section */}
-        <section id="renda-fixa" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">Renda Fixa</h2>
-          <p className="text-gray-500 mb-8">
+        <section id="renda-fixa" className="mb-12 md:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">
+            Renda Fixa
+          </h2>
+          <p className="text-sm sm:text-base text-gray-500 mb-6 lg:mb-8">
             Nesta modalidade, você "empresta" seu dinheiro para uma instituição
             (governo, banco ou empresa) e recebe uma remuneração com regras
             definidas no momento da aplicação. É considerada a porta de entrada
             para o mundo dos investimentos por sua previsibilidade e segurança.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <InteractiveCard
               title="Títulos Públicos"
               description="Emitidos pelo governo federal. São os investimentos mais seguros do país."
@@ -1250,20 +1291,20 @@ export default function Index() {
         </section>
 
         {/* Renda Variável Section */}
-        <section id="renda-variavel" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">
+        <section id="renda-variavel" className="mb-12 md:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">
             Renda Variável
           </h2>
-          <p className="text-gray-500 mb-8">
+          <p className="text-sm sm:text-base text-gray-500 mb-6 lg:mb-8">
             Aqui, a rentabilidade não é conhecida no momento da aplicação. O
             valor dos ativos oscila conforme o mercado, oferecendo maior
             potencial de ganho, mas também maior risco. É onde você se torna
             sócio de empresas e projetos.
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <InteractiveCard
-              title="Aç��es"
+              title="Ações"
               description="Pequenas partes de uma empresa. Ao comprar, você se torna sócio."
               details={[
                 {
@@ -1319,11 +1360,11 @@ export default function Index() {
         </section>
 
         {/* Calculadora Section */}
-        <section id="calculadora" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">
+        <section id="calculadora" className="mb-12 md:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">
             Calculadora de Juros
           </h2>
-          <p className="text-gray-500 mb-8">
+          <p className="text-sm sm:text-base text-gray-500 mb-6 lg:mb-8">
             Veja na prática a diferença entre juros simples e compostos.
             Preencha os campos abaixo e visualize o poder da capitalização ao
             longo do tempo.
@@ -1333,11 +1374,11 @@ export default function Index() {
         </section>
 
         {/* Flash Cards Section */}
-        <section id="flashcards" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">
+        <section id="flashcards" className="mb-12 md:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">
             Flash Cards para Estudo
           </h2>
-          <p className="text-gray-500 mb-8">
+          <p className="text-sm sm:text-base text-gray-500 mb-6 lg:mb-8">
             Teste seus conhecimentos com nossos flash cards interativos. Clique
             nos cards para revelar as respostas e navegue entre diferentes
             categorias para revisar os conceitos mais importantes.
@@ -1347,11 +1388,11 @@ export default function Index() {
         </section>
 
         {/* Questionário Section */}
-        <section id="questionario" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">
+        <section id="questionario" className="mb-12 md:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">
             Questionário Interativo
           </h2>
-          <p className="text-gray-500 mb-8">
+          <p className="text-sm sm:text-base text-gray-500 mb-6 lg:mb-8">
             Pratique com perguntas de diferentes níveis de dificuldade. Escreva
             suas respostas e compare com as respostas esperadas para consolidar
             seu aprendizado.
@@ -1361,34 +1402,34 @@ export default function Index() {
         </section>
 
         {/* Provas Anteriores Section */}
-        <section id="provas-anteriores" className="mb-16">
-          <h2 className="text-3xl font-bold text-gray-800 mb-2">
+        <section id="provas-anteriores" className="mb-12 md:mb-16">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-2">
             Acesso a Provas Anteriores e Recursos
           </h2>
-          <p className="text-gray-500 mb-8">
+          <p className="text-sm sm:text-base text-gray-500 mb-6 lg:mb-8">
             Estude com materiais e provas de edições passadas da OLITEF. Utilize
             estes recursos para praticar e se familiarizar com o formato das
             questões.
           </p>
 
-          <div className="grid md:grid-cols-1 lg:grid-cols-4 gap-6">
-            <Card className="p-6 hover:shadow-lg transition-shadow duration-200">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+            <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow duration-200">
               <CardHeader>
-                <CardTitle className="text-xl text-primary flex items-center gap-2">
+                <CardTitle className="text-lg sm:text-xl text-primary flex items-center gap-2">
                   📚 Prova 2024
                 </CardTitle>
-                <CardDescription>
+                <CardDescription className="text-sm sm:text-base">
                   Prova e Gabarito do Nível 3 (1º Ano do Ensino Médio) - OLITEF
                   2024
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-4">
                   Acesse a prova completa com gabarito da edição anterior para
                   praticar e conhecer o estilo das questões.
                 </p>
                 <Button
-                  className="w-full"
+                  className="w-full text-sm sm:text-base"
                   onClick={() =>
                     window.open(
                       "https://upmat-gestao.s3.us-west-2.amazonaws.com/Olitef/2024/Provas+e+Gabaritos/Prova+e+Gabarito+N%C3%ADvel+3+(1%C2%BA+Ano+do+Ensino+M%C3%A9dio)+-+OLITEF+2024.pdf",
@@ -1401,22 +1442,22 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow duration-200">
+            <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow duration-200">
               <CardHeader>
-                <CardTitle className="text-xl text-primary flex items-center gap-2">
+                <CardTitle className="text-lg sm:text-xl text-primary flex items-center gap-2">
                   🎓 Curso B3
                 </CardTitle>
-                <CardDescription>
+                <CardDescription className="text-sm sm:text-base">
                   Comece por aqui para investir - Curso oficial da B3
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-4">
                   Curso gratuito e oficial da B3 que ensina os fundamentos dos
                   investimentos no mercado brasileiro.
                 </p>
                 <Button
-                  className="w-full"
+                  className="w-full text-sm sm:text-base"
                   onClick={() =>
                     window.open(
                       "https://edu.b3.com.br/w/comece-por-aqui-para-investir-curso",
@@ -1429,23 +1470,23 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow duration-200">
+            <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow duration-200">
               <CardHeader>
-                <CardTitle className="text-xl text-primary flex items-center gap-2">
+                <CardTitle className="text-lg sm:text-xl text-primary flex items-center gap-2">
                   📖 Material Extra
                 </CardTitle>
-                <CardDescription>
+                <CardDescription className="text-sm sm:text-base">
                   Conteúdos OLITEF - Material de Estudo Complementar
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-4">
                   Material complementar com conceitos fundamentais de
                   investimentos e economia, focado nos produtos do mercado
                   financeiro brasileiro.
                 </p>
                 <Button
-                  className="w-full"
+                  className="w-full text-sm sm:text-base"
                   onClick={() =>
                     window.open(
                       "https://cdn.builder.io/o/assets%2F776fb6a9bcd04c3cad60f1ae1f8d4051%2F3a1f9407858f413fafaff82c3d5dd9f2?alt=media&token=cdedbe3a-2666-4a71-9282-15a426ae8b86&apiKey=776fb6a9bcd04c3cad60f1ae1f8d4051",
@@ -1458,17 +1499,17 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow duration-200">
+            <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow duration-200">
               <CardHeader>
-                <CardTitle className="text-xl text-primary flex items-center gap-2">
+                <CardTitle className="text-lg sm:text-xl text-primary flex items-center gap-2">
                   📝 Inscrição OLITEF 2025
                 </CardTitle>
-                <CardDescription>
+                <CardDescription className="text-sm sm:text-base">
                   Formulário oficial de inscrição para a OLITEF 2025
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-4">
                   Faça sua inscrição para a Olimpíada de Educação Financeira
                   2025. Não perca o prazo!
                 </p>
@@ -1484,14 +1525,14 @@ export default function Index() {
             </Card>
           </div>
 
-          <Card className="mt-6 p-6 bg-blue-50 border-blue-200">
+          <Card className="mt-4 sm:mt-6 p-4 sm:p-6 bg-blue-50 border-blue-200">
             <CardHeader>
-              <CardTitle className="text-lg text-blue-800">
+              <CardTitle className="text-base sm:text-lg text-blue-800">
                 💡 Dica de Estudo
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-blue-700">
+              <p className="text-sm sm:text-base text-blue-700">
                 Recomendamos começar com o <strong>Curso B3</strong> para uma
                 base sólida, depois estudar o <strong>Material Extra</strong>{" "}
                 para aprofundar os conceitos, e finalizar praticando com a{" "}
