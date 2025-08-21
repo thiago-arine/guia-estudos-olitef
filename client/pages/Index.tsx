@@ -1448,7 +1448,7 @@ export default function Index() {
             <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow duration-200">
               <CardHeader>
                 <CardTitle className="text-lg sm:text-xl text-primary flex items-center gap-2">
-                  📖 Material Extra
+                  ��� Material Extra
                 </CardTitle>
                 <CardDescription className="text-sm sm:text-base">
                   Conteúdos OLITEF - Material de Estudo Complementar
@@ -1474,12 +1474,12 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow duration-200">
+            <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow duration-200">
               <CardHeader>
-                <CardTitle className="text-xl text-primary flex items-center gap-2">
+                <CardTitle className="text-lg sm:text-xl text-primary flex items-center gap-2">
                   📝 Inscrição OLITEF 2025
                 </CardTitle>
-                <CardDescription>
+                <CardDescription className="text-sm sm:text-base">
                   Formulário oficial de inscrição para a OLITEF 2025
                 </CardDescription>
               </CardHeader>
