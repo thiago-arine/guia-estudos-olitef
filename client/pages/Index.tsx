@@ -246,7 +246,7 @@ const flashCardData = [
     ],
   },
   {
-    category: "Títulos Específicos",
+    category: "Títulos Espec��ficos",
     cards: [
       {
         front: "Para que serve o Tesouro Educa+?",
@@ -479,15 +479,15 @@ interface InteractiveCardProps {
 interface FlashCardProps {
   front: string;
   back: string | React.ReactNode;
+  isFlipped: boolean;
+  onToggle: () => void;
 }
 
-const FlashCard: React.FC<FlashCardProps> = ({ front, back }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
+const FlashCard: React.FC<FlashCardProps> = ({ front, back, isFlipped, onToggle }) => {
   return (
     <div
       className="relative w-full h-64 cursor-pointer perspective-1000"
-      onClick={() => setIsFlipped(!isFlipped)}
+      onClick={onToggle}
     >
       <div
         className={cn(
@@ -763,6 +763,7 @@ const CompoundInterestCalculator: React.FC = () => {
 const FlashCardSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
+  const [isFlipped, setIsFlipped] = useState(false);
 
   const currentCategory = flashCardData[selectedCategory];
   const currentCard = currentCategory.cards[currentCardIndex];
@@ -770,18 +771,25 @@ const FlashCardSection: React.FC = () => {
   const nextCard = () => {
     if (currentCardIndex < currentCategory.cards.length - 1) {
       setCurrentCardIndex(currentCardIndex + 1);
+      setIsFlipped(false); // Reset to front when advancing
     }
   };
 
   const prevCard = () => {
     if (currentCardIndex > 0) {
       setCurrentCardIndex(currentCardIndex - 1);
+      setIsFlipped(false); // Reset to front when going back
     }
   };
 
   const changeCategory = (categoryIndex: number) => {
     setSelectedCategory(categoryIndex);
     setCurrentCardIndex(0);
+    setIsFlipped(false); // Reset to front when changing category
+  };
+
+  const toggleCard = () => {
+    setIsFlipped(!isFlipped);
   };
 
   return (
@@ -814,7 +822,12 @@ const FlashCardSection: React.FC = () => {
 
       {/* Flash Card */}
       <div className="max-w-2xl mx-auto">
-        <FlashCard front={currentCard.front} back={currentCard.back} />
+        <FlashCard
+          front={currentCard.front}
+          back={currentCard.back}
+          isFlipped={isFlipped}
+          onToggle={toggleCard}
+        />
       </div>
 
       {/* Navigation */}
