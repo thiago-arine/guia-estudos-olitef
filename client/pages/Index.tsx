@@ -192,7 +192,7 @@ const flashCardData = [
     cards: [
       {
         front: "O que acontece com a Taxa Selic quando a inflação está alta?",
-        back: "O COPOM tende a aumentar a Selic para desestimular consumo e investimentos, combatendo a inflaç��o.",
+        back: "O COPOM tende a aumentar a Selic para desestimular consumo e investimentos, combatendo a inflação.",
       },
       {
         front: "Qual o impacto de uma inflação alta no poder de compra?",
@@ -409,7 +409,7 @@ const quizData = [
       },
       {
         question:
-          "Uma empresa que já fez seu IPO decide emitir mais a��ões para captar novos recursos. Como é chamada essa nova emiss��o e qual tipo de oferta (primária ou secundária) ela provavelmente será?",
+          "Uma empresa que já fez seu IPO decide emitir mais ações para captar novos recursos. Como é chamada essa nova emissão e qual tipo de oferta (primária ou secundária) ela provavelmente será?",
         answer:
           'É chamada de "Follow on". Provavelmente será uma oferta primária, pois os recursos captados entrarão diretamente na empresa para financiar seus projetos e aumentar o capital.',
       },
@@ -450,7 +450,7 @@ const quizData = [
       },
       {
         question:
-          "Explique como a Taxa Selic atua como uma ferramenta do COPOM para controlar a inflação, detalhando o mecanismo por trás dessa relaç��o.",
+          "Explique como a Taxa Selic atua como uma ferramenta do COPOM para controlar a inflação, detalhando o mecanismo por trás dessa relação.",
         answer:
           "Quando a inflação está alta, o COPOM aumenta a Taxa Selic. Isso eleva o custo dos empréstimos e financiamentos para empresas e consumidores. Juros mais altos desestimulam o consumo (pois o crédito fica mais caro e os empréstimos existentes pesam mais) e os investimentos (tornando o financiamento de projetos mais custoso). Com menor demanda por bens e serviços na economia e menos dinheiro em circulação, a tendência natural é que os preços se estabilizem ou diminuam, contendo a inflação. O inverso ocorre para estimular a economia em momentos de baixa inflação.",
       },
@@ -1281,7 +1281,7 @@ export default function Index() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             <InteractiveCard
-              title="Aç��es"
+              title="Ações"
               description="Pequenas partes de uma empresa. Ao comprar, você se torna sócio."
               details={[
                 {
@@ -1302,7 +1302,7 @@ export default function Index() {
 
             <InteractiveCard
               title="Fundos Imobiliários (FIIs)"
-              description="Investem em empreendimentos imobili��rios, como shoppings e escritórios."
+              description="Investem em empreendimentos imobiliários, como shoppings e escritórios."
               details={[
                 {
                   title: "Tipos",
@@ -1342,7 +1342,7 @@ export default function Index() {
             Calculadora de Juros
           </h2>
           <p className="text-sm sm:text-base text-gray-500 mb-6 lg:mb-8">
-            Veja na prática a diferen��a entre juros simples e compostos.
+            Veja na prática a diferença entre juros simples e compostos.
             Preencha os campos abaixo e visualize o poder da capitalização ao
             longo do tempo.
           </p>
@@ -1402,7 +1402,7 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-sm sm:text-base text-gray-600 mb-4">
-                  Acesse a prova completa com gabarito da edi��ão anterior para
+                  Acesse a prova completa com gabarito da edição anterior para
                   praticar e conhecer o estilo das questões.
                 </p>
                 <Button
