@@ -47,7 +47,12 @@ const flashCardData = [
     cards: [
       {
         front: "Qual a fórmula dos Juros Simples e o que cada letra significa?",
-        back: "J = C × i × t. J = Juros, C = Capital, i = Taxa de Juros, t = Tempo.",
+        back: (
+          <>
+            <code className="font-mono">J = C × i × t</code>{" "}
+            J = Juros, C = Capital, i = Taxa de Juros, t = Tempo.
+          </>
+        ),
       },
       {
         front:
@@ -489,7 +494,7 @@ interface InteractiveCardProps {
 
 interface FlashCardProps {
   front: string;
-  back: string;
+  back: string | React.ReactNode;
 }
 
 const FlashCard: React.FC<FlashCardProps> = ({ front, back }) => {
@@ -528,7 +533,7 @@ const FlashCard: React.FC<FlashCardProps> = ({ front, back }) => {
               <div className="text-sm text-green-600 font-semibold mb-2">
                 RESPOSTA
               </div>
-              <p className="text-gray-800 font-medium">{back}</p>
+              <div className="text-gray-800 font-medium">{back}</div>
               <div className="text-xs text-gray-500 mt-4">
                 Clique para voltar à pergunta
               </div>
