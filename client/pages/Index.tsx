@@ -49,7 +49,7 @@ const flashCardData = [
         front: "Qual a fórmula dos Juros Simples e o que cada letra significa?",
         back: (
           <>
-            <code className="font-mono">J = C × i × t</code>{" "}
+            <code className="font-mono">J = C × i × t&nbsp;</code>{" "}
             J = Juros, C = Capital, i = Taxa de Juros, t = Tempo.
           </>
         ),
