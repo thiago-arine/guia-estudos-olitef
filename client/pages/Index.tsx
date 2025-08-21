@@ -176,6 +176,14 @@ const flashCardData = [
         front: "Qual a vantagem de investir em BDRs?",
         back: "Permitem investir em ações de empresas estrangeiras comprando-as na B3, sem precisar abrir conta no exterior.",
       },
+      {
+        front: "O que são Fiagros?",
+        back: "Fundos de Investimento nas Cadeias Produtivas Agroindustriais - fundos que aplicam em ativos do setor agroindustrial.",
+      },
+      {
+        front: "O que é o IFIX?",
+        back: "Índice que mede a média dos preços dos maiores fundos imobiliários (FIIs) negociados na Bolsa.",
+      },
     ],
   },
   {
@@ -253,7 +261,6 @@ const flashCardData = [
         back: 'Quando há expectativa de queda da Taxa Selic, pois você "trava" uma rentabilidade maior do que a Selic que possivelmente cairá.',
       },
       {
-
         front: "Por que o Tesouro IPCA+ é ideal para objetivos de longo prazo?",
         back: "Porque protege contra a inflação, garantindo que o poder de compra seja mantido ao longo do tempo.",
       },
@@ -305,7 +312,7 @@ const quizData = [
       },
       {
         question:
-          "Qual risco em investimentos de Renda Fixa se refere à chance de o emissor não devolver o dinheiro investido (calote)?",
+          "Qual risco em investimentos de Renda Fixa se refere à chance de o emissor não devolver o dinheiro investido?",
         answer: "Risco de Crédito.",
       },
       {
@@ -345,7 +352,7 @@ const quizData = [
       },
       {
         question: 'O que significa "Amortização" em uma dívida?',
-        answer: "Aplicar pagamentos extras ao principal da dívida.",
+        answer: "Aplicar pagamentos extras ao principal da dívida, diminuindo parcelas e juros.",
       },
     ],
   },
@@ -356,7 +363,7 @@ const quizData = [
         question:
           "Explique a principal diferença entre Juros Simples e Juros Compostos.",
         answer:
-          "Juros Simples incidem apenas sobre o capital inicial, resultando em crescimento linear. Juros Compostos incidem sobre o capital inicial acrescido dos juros já acumulados, resultando em crescimento exponencial.",
+          "Juros Simples incidem apenas sobre o capital inicial, resultando em crescimento linear. Juros Compostos incidem sobre o capital inicial acrescido dos juros já acumulados, resultando em crescimento exponencial (juros sobre juros).",
       },
       {
         question:
@@ -366,15 +373,15 @@ const quizData = [
       },
       {
         question:
-          "Além do risco de crédito e liquidez, qual outro risco importante deve ser considerado em investimentos de Renda Fixa, especialmente se for preciso vender o título antes do vencimento? Explique.",
+          "Além do risco de crédito e liquidez, qual outro risco importante deve ser considerado em investimentos? Explique.",
         answer:
-          "Risco de Mercado. Ele se refere à oscilação do preço do título no mercado secundário devido a mudanças nas taxas de juros ou condições econômicas. Se o investidor precisar vender antes do vencimento, pode ter perdas.",
+          "Risco de Mercado. Ele se refere à oscilação do preço do título no mercado secundário devido a mudanças nas taxas de juros ou condições econômicas.",
       },
       {
         question:
           "Qual a principal diferença de rentabilidade da Poupança em relação a títulos pós-fixados atuais?",
         answer:
-          "A Poupança só rende a cada 30 dias (no aniversário), enquanto os títulos pós-fixados atuais geralmente rendem diariamente.",
+          "A Poupança só rende a cada 30 dias, enquanto os títulos pós-fixados atuais geralmente rendem diariamente.",
       },
       {
         question:
@@ -398,7 +405,7 @@ const quizData = [
         question:
           "Qual a principal diferença de direito entre uma Ação Ordinária (ON) e uma Ação Preferencial (PN)?",
         answer:
-          "A Ação Ordinária (ON) confere direito a voto nas assembleias da empresa, permitindo ao acionista influenciar decisões. A Ação Preferencial (PN) geralmente não dá direito a voto, mas tem prioridade no recebimento de dividendos e no reembolso do capital.",
+          "A Ação Ordinária (ON) confere direito a voto nas assembleias da empresa, permitindo ao acionista influenciar decisões. A Ação Preferencial (PN) tem prioridade no recebimento de dividendos.",
       },
       {
         question:
@@ -455,27 +462,9 @@ const quizData = [
       },
       {
         question:
-          'Se uma empresa na B3 se compromete com "regras extras de transparência e gestão", qual o impacto disso para os investidores e para a própria empresa?',
-        answer:
-          "Para os investidores, o impacto é positivo, pois as regras de transparência e gestão (governança corporativa) reduzem o risco percebido do investimento e aumentam a confiança na empresa. Isso pode atrair mais investidores, aumentando a demanda pelas ações e, consequentemente, seu valor. Para a própria empresa, essa adesão demonstra compromisso com boas práticas, melhorando sua reputação no mercado, facilitando a captação de recursos e potencialmente resultando em um menor custo de capital.",
-      },
-      {
-        question:
-          "Analise um cenário onde um investidor possui R$ 100.000 e precisa decidir entre aplicar em Tesouro Selic (rendendo 100% do CDI) ou em um CDB que paga 115% do CDI, mas com carência de 2 anos. Quais fatores devem ser considerados nesta decisão?",
+          "Analise um cenário onde um investidor possui R$ 100.000,00 e precisa decidir entre aplicar em Tesouro Selic (rendendo 100% do CDI) ou em um CDB que paga 115% do CDI, mas com carência de 2 anos. Quais fatores devem ser considerados nesta decisão?",
         answer:
           "Fatores a considerar: 1) Necessidade de liquidez - se o investidor pode precisar do dinheiro em menos de 2 anos, o Tesouro Selic é mais adequado; 2) Tributação - CDB tem IR regressivo, que diminui com o tempo, favorecendo aplicações mais longas; 3) Risco de crédito - Tesouro tem menor risco que o banco emissor do CDB; 4) Garantia FGC - CDB está coberto até R$ 250.000; 5) Expectativa da Selic - se houver expectativa de alta da Selic, o adicional de 15% do CDB pode compensar a carência; 6) Diversificação - considerar não concentrar todo o valor em um único investimento.",
-      },
-      {
-        question:
-          "Como a correlação entre diferentes classes de ativos (Renda Fixa, Ações, FIIs) pode ser utilizada estrategicamente na construção de uma carteira de investimentos eficiente?",
-        answer:
-          "A correlação mede como diferentes ativos se comportam em relação uns aos outros. Uma carteira eficiente busca ativos com baixa correlação ou correlação negativa para reduzir o risco total. Por exemplo: Renda Fixa geralmente tem correlação baixa ou negativa com ações - quando ações caem por incerteza econômica, investidores migram para RF. FIIs podem ter correlação moderada com ações e baixa com RF. Diversificar entre classes com diferentes correlações permite que quando uma classe está em baixa, outras possam estar estáveis ou em alta, reduzindo a volatilidade geral da carteira mantendo potencial de retorno.",
-      },
-      {
-        question:
-          "Explique como funciona o mecanismo de marcação a mercado em títulos públicos e qual seu impacto para investidores que precisam vender antes do vencimento.",
-        answer:
-          "A marcação a mercado é o processo de atualizar diariamente o valor dos títulos conforme as condições de mercado. Quando as taxas de juros sobem, os preços dos títulos prefixados caem (e vice-versa), pois novos títulos oferecem rentabilidade maior. Para investidores que vendem antes do vencimento: podem ter ganhos se as taxas caíram desde a compra, ou perdas se as taxas subiram. O Tesouro Selic é menos afetado por isso pois acompanha a Selic atual. Este mecanismo explica por que títulos prefixados e IPCA+ têm maior volatilidade no curto prazo, mas garantem o rendimento contratado se mantidos até o vencimento.",
       },
     ],
   },
