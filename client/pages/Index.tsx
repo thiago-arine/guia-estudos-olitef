@@ -1448,7 +1448,7 @@ export default function Index() {
             <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow duration-200">
               <CardHeader>
                 <CardTitle className="text-lg sm:text-xl text-primary flex items-center gap-2">
-                  ��� Material Extra
+                  📖 Material Extra
                 </CardTitle>
                 <CardDescription className="text-sm sm:text-base">
                   Conteúdos OLITEF - Material de Estudo Complementar
@@ -1500,14 +1500,14 @@ export default function Index() {
             </Card>
           </div>
 
-          <Card className="mt-6 p-6 bg-blue-50 border-blue-200">
+          <Card className="mt-4 sm:mt-6 p-4 sm:p-6 bg-blue-50 border-blue-200">
             <CardHeader>
-              <CardTitle className="text-lg text-blue-800">
+              <CardTitle className="text-base sm:text-lg text-blue-800">
                 💡 Dica de Estudo
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-blue-700">
+              <p className="text-sm sm:text-base text-blue-700">
                 Recomendamos começar com o <strong>Curso B3</strong> para uma
                 base sólida, depois estudar o <strong>Material Extra</strong>{" "}
                 para aprofundar os conceitos, e finalizar praticando com a{" "}
