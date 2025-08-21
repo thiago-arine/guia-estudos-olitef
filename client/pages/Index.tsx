@@ -1399,7 +1399,7 @@ export default function Index() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-4">
                   Acesse a prova completa com gabarito da edi��ão anterior para
                   praticar e conhecer o estilo das questões.
                 </p>
@@ -1427,7 +1427,7 @@ export default function Index() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-4">
                   Curso gratuito e oficial da B3 que ensina os fundamentos dos
                   investimentos no mercado brasileiro.
                 </p>
@@ -1455,7 +1455,7 @@ export default function Index() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-4">
                   Material complementar com conceitos fundamentais de
                   investimentos e economia, focado nos produtos do mercado
                   financeiro brasileiro.
@@ -1484,7 +1484,7 @@ export default function Index() {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <p className="text-gray-600 mb-4">
+                <p className="text-sm sm:text-base text-gray-600 mb-4">
                   Faça sua inscrição para a Olimpíada de Educação Financeira
                   2025. Não perca o prazo!
                 </p>
