@@ -47,7 +47,7 @@ const flashCardData = [
     cards: [
       {
         front: "Qual a fórmula dos Juros Simples e o que cada letra significa?",
-        back: "J=C⋅i⋅t. J = Juros, C = Capital, i = Taxa de Juros, t = Tempo.",
+        back: "J = C × i × t. J = Juros, C = Capital, i = Taxa de Juros, t = Tempo.",
       },
       {
         front:
