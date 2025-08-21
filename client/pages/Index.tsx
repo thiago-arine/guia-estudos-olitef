@@ -1216,7 +1216,7 @@ export default function Index() {
               details={[
                 {
                   title: "CDB",
-                  content: "Certificado de Depósito Bancário. O mais comum.",
+                  content: "Certificado de Depósito Banc��rio. O mais comum.",
                 },
                 {
                   title: "LCI/LCA",
@@ -1363,14 +1363,14 @@ export default function Index() {
         {/* Provas Anteriores Section */}
         <section id="provas-anteriores" className="mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-2">
-            Acesso a Conteúdos Complementares
+            Acesso a Provas Anteriores e Recursos
           </h2>
           <p className="text-gray-500 mb-8">
             Estude com materiais e provas de edições passadas da OLITEF.
             Utilize estes recursos para praticar e se familiarizar com o formato das questões.
           </p>
 
-          <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-1 lg:grid-cols-4 gap-6">
             <Card className="p-6 hover:shadow-lg transition-shadow duration-200">
               <CardHeader>
                 <CardTitle className="text-xl text-primary flex items-center gap-2">
