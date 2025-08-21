@@ -450,7 +450,7 @@ const quizData = [
       },
       {
         question:
-          "Explique como a Taxa Selic atua como uma ferramenta do COPOM para controlar a inflação, detalhando o mecanismo por trás dessa relação.",
+          "Explique como a Taxa Selic atua como uma ferramenta do COPOM para controlar a inflação, detalhando o mecanismo por trás dessa relaç��o.",
         answer:
           "Quando a inflação está alta, o COPOM aumenta a Taxa Selic. Isso eleva o custo dos empréstimos e financiamentos para empresas e consumidores. Juros mais altos desestimulam o consumo (pois o crédito fica mais caro e os empréstimos existentes pesam mais) e os investimentos (tornando o financiamento de projetos mais custoso). Com menor demanda por bens e serviços na economia e menos dinheiro em circulação, a tendência natural é que os preços se estabilizem ou diminuam, contendo a inflação. O inverso ocorre para estimular a economia em momentos de baixa inflação.",
       },
@@ -1436,6 +1436,29 @@ export default function Index() {
                   onClick={() => window.open('https://cdn.builder.io/o/assets%2F776fb6a9bcd04c3cad60f1ae1f8d4051%2F3a1f9407858f413fafaff82c3d5dd9f2?alt=media&token=cdedbe3a-2666-4a71-9282-15a426ae8b86&apiKey=776fb6a9bcd04c3cad60f1ae1f8d4051', '_blank')}
                 >
                   Baixar Material Extra
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="p-6 hover:shadow-lg transition-shadow duration-200">
+              <CardHeader>
+                <CardTitle className="text-xl text-primary flex items-center gap-2">
+                  📝 Inscrição OLITEF 2025
+                </CardTitle>
+                <CardDescription>
+                  Formulário oficial de inscrição para a OLITEF 2025
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600 mb-4">
+                  Faça sua inscrição para a Olimpíada de Educação Financeira 2025.
+                  Não perca o prazo!
+                </p>
+                <Button
+                  className="w-full bg-green-600 hover:bg-green-700"
+                  onClick={() => window.open('https://forms.gle/uSfRyobTWoQSdPEA6', '_blank')}
+                >
+                  Inscrever-se Agora
                 </Button>
               </CardContent>
             </Card>
