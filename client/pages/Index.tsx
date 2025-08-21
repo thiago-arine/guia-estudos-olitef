@@ -47,7 +47,12 @@ const flashCardData = [
     cards: [
       {
         front: "Qual a fórmula dos Juros Simples e o que cada letra significa?",
-        back: "J=C⋅i⋅t. J = Juros, C = Capital, i = Taxa de Juros, t = Tempo.",
+        back: (
+          <>
+            <code className="font-mono">J = C × i × t.&nbsp;</code>J = Juros, C
+            = Capital, i = Taxa de Juros, t = Tempo.
+          </>
+        ),
       },
       {
         front:
@@ -241,7 +246,7 @@ const flashCardData = [
     ],
   },
   {
-    category: "Títulos Específicos",
+    category: "Títulos Espec��ficos",
     cards: [
       {
         front: "Para que serve o Tesouro Educa+?",
@@ -282,7 +287,7 @@ const quizData = [
       },
       {
         question: "Qual é a fórmula dos Juros Simples?",
-        answer: "J=C⋅i⋅t.",
+        answer: <code className="font-mono">J = C × i × t</code>,
       },
       {
         question:
@@ -305,12 +310,12 @@ const quizData = [
       },
       {
         question:
-          "Qual risco em investimentos de Renda Fixa se refere à chance de o emissor não devolver o dinheiro investido (calote)?",
+          "Qual risco em investimentos de Renda Fixa se refere à chance de o emissor não devolver o dinheiro investido?",
         answer: "Risco de Crédito.",
       },
       {
         question:
-          "Qual fundo garante depósitos em conta e investimentos bancários em até R$ 250.000,00 por CPF e por instituição financeira?",
+          "Qual fundo garante depósitos em conta e investimentos bancários em até R$ 250.000,00 por CPF?",
         answer: "FGC (Fundo Garantidor de Crédito).",
       },
       {
@@ -329,7 +334,7 @@ const quizData = [
         answer: "Tesouro Selic.",
       },
       {
-        question: "O que são a��ões?",
+        question: "O que são ações?",
         answer:
           "Títulos que representam uma parte do capital social de uma sociedade anônima (empresa).",
       },
@@ -345,7 +350,8 @@ const quizData = [
       },
       {
         question: 'O que significa "Amortização" em uma dívida?',
-        answer: "Aplicar pagamentos extras ao principal da dívida.",
+        answer:
+          "Aplicar pagamentos extras ao principal da dívida, diminuindo parcelas e juros.",
       },
     ],
   },
@@ -356,25 +362,25 @@ const quizData = [
         question:
           "Explique a principal diferença entre Juros Simples e Juros Compostos.",
         answer:
-          "Juros Simples incidem apenas sobre o capital inicial, resultando em crescimento linear. Juros Compostos incidem sobre o capital inicial acrescido dos juros já acumulados, resultando em crescimento exponencial.",
+          "Juros Simples incidem apenas sobre o capital inicial, resultando em crescimento linear. Juros Compostos incidem sobre o capital inicial acrescido dos juros já acumulados, resultando em crescimento exponencial (juros sobre juros).",
       },
       {
         question:
           "Se um investimento de Renda Fixa tem remuneração pós-fixada atrelada ao IPCA, o que isso significa para o investidor?",
         answer:
-          "Significa que o ganho exato só será conhecido no vencimento, pois ele irá variar conforme a inflaç��o (IPCA) ao longo do período do investimento.",
+          "Significa que o ganho exato só será conhecido no vencimento, pois ele irá variar conforme a inflação (IPCA) ao longo do período do investimento.",
       },
       {
         question:
-          "Além do risco de crédito e liquidez, qual outro risco importante deve ser considerado em investimentos de Renda Fixa, especialmente se for preciso vender o título antes do vencimento? Explique.",
+          "Além do risco de crédito e liquidez, qual outro risco importante deve ser considerado em investimentos? Explique.",
         answer:
-          "Risco de Mercado. Ele se refere à oscilação do preço do título no mercado secundário devido a mudanças nas taxas de juros ou condições econômicas. Se o investidor precisar vender antes do vencimento, pode ter perdas.",
+          "Risco de Mercado. Ele se refere à oscilação do preço do título no mercado secundário devido a mudanças nas taxas de juros ou condições econômicas.",
       },
       {
         question:
           "Qual a principal diferença de rentabilidade da Poupança em relação a títulos pós-fixados atuais?",
         answer:
-          "A Poupança só rende a cada 30 dias (no aniversário), enquanto os títulos pós-fixados atuais geralmente rendem diariamente.",
+          "A Poupança só rende a cada 30 dias, enquanto os títulos pós-fixados atuais geralmente rendem diariamente.",
       },
       {
         question:
@@ -398,7 +404,7 @@ const quizData = [
         question:
           "Qual a principal diferença de direito entre uma Ação Ordinária (ON) e uma Ação Preferencial (PN)?",
         answer:
-          "A Ação Ordinária (ON) confere direito a voto nas assembleias da empresa, permitindo ao acionista influenciar decisões. A Ação Preferencial (PN) geralmente não dá direito a voto, mas tem prioridade no recebimento de dividendos e no reembolso do capital.",
+          "A Ação Ordinária (ON) confere direito a voto nas assembleias da empresa, permitindo ao acionista influenciar decisões. A Ação Preferencial (PN) tem prioridade no recebimento de dividendos.",
       },
       {
         question:
@@ -455,27 +461,9 @@ const quizData = [
       },
       {
         question:
-          'Se uma empresa na B3 se compromete com "regras extras de transparência e gestão", qual o impacto disso para os investidores e para a própria empresa?',
-        answer:
-          "Para os investidores, o impacto é positivo, pois as regras de transparência e gestão (governança corporativa) reduzem o risco percebido do investimento e aumentam a confiança na empresa. Isso pode atrair mais investidores, aumentando a demanda pelas ações e, consequentemente, seu valor. Para a própria empresa, essa adesão demonstra compromisso com boas práticas, melhorando sua reputação no mercado, facilitando a captação de recursos e potencialmente resultando em um menor custo de capital.",
-      },
-      {
-        question:
-          "Analise um cenário onde um investidor possui R$ 100.000 e precisa decidir entre aplicar em Tesouro Selic (rendendo 100% do CDI) ou em um CDB que paga 115% do CDI, mas com carência de 2 anos. Quais fatores devem ser considerados nesta decisão?",
+          "Analise um cenário onde um investidor possui R$ 100.000,00 e precisa decidir entre aplicar em Tesouro Selic (rendendo 100% do CDI) ou em um CDB que paga 115% do CDI, mas com carência de 2 anos. Quais fatores devem ser considerados nesta decisão?",
         answer:
           "Fatores a considerar: 1) Necessidade de liquidez - se o investidor pode precisar do dinheiro em menos de 2 anos, o Tesouro Selic é mais adequado; 2) Tributação - CDB tem IR regressivo, que diminui com o tempo, favorecendo aplicações mais longas; 3) Risco de crédito - Tesouro tem menor risco que o banco emissor do CDB; 4) Garantia FGC - CDB está coberto até R$ 250.000; 5) Expectativa da Selic - se houver expectativa de alta da Selic, o adicional de 15% do CDB pode compensar a carência; 6) Diversificação - considerar não concentrar todo o valor em um único investimento.",
-      },
-      {
-        question:
-          "Como a correlação entre diferentes classes de ativos (Renda Fixa, Ações, FIIs) pode ser utilizada estrategicamente na construção de uma carteira de investimentos eficiente?",
-        answer:
-          "A correlação mede como diferentes ativos se comportam em relação uns aos outros. Uma carteira eficiente busca ativos com baixa correlação ou correlação negativa para reduzir o risco total. Por exemplo: Renda Fixa geralmente tem correlação baixa ou negativa com ações - quando ações caem por incerteza econômica, investidores migram para RF. FIIs podem ter correlação moderada com ações e baixa com RF. Diversificar entre classes com diferentes correlações permite que quando uma classe está em baixa, outras possam estar estáveis ou em alta, reduzindo a volatilidade geral da carteira mantendo potencial de retorno.",
-      },
-      {
-        question:
-          "Explique como funciona o mecanismo de marcação a mercado em títulos públicos e qual seu impacto para investidores que precisam vender antes do vencimento.",
-        answer:
-          "A marcação a mercado é o processo de atualizar diariamente o valor dos títulos conforme as condições de mercado. Quando as taxas de juros sobem, os preços dos títulos prefixados caem (e vice-versa), pois novos títulos oferecem rentabilidade maior. Para investidores que vendem antes do vencimento: podem ter ganhos se as taxas caíram desde a compra, ou perdas se as taxas subiram. O Tesouro Selic é menos afetado por isso pois acompanha a Selic atual. Este mecanismo explica por que títulos prefixados e IPCA+ têm maior volatilidade no curto prazo, mas garantem o rendimento contratado se mantidos até o vencimento.",
       },
     ],
   },
@@ -489,16 +477,21 @@ interface InteractiveCardProps {
 
 interface FlashCardProps {
   front: string;
-  back: string;
+  back: string | React.ReactNode;
+  isFlipped: boolean;
+  onToggle: () => void;
 }
 
-const FlashCard: React.FC<FlashCardProps> = ({ front, back }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
+const FlashCard: React.FC<FlashCardProps> = ({
+  front,
+  back,
+  isFlipped,
+  onToggle,
+}) => {
   return (
     <div
       className="relative w-full h-64 cursor-pointer perspective-1000"
-      onClick={() => setIsFlipped(!isFlipped)}
+      onClick={onToggle}
     >
       <div
         className={cn(
@@ -528,7 +521,7 @@ const FlashCard: React.FC<FlashCardProps> = ({ front, back }) => {
               <div className="text-sm text-green-600 font-semibold mb-2">
                 RESPOSTA
               </div>
-              <p className="text-gray-800 font-medium">{back}</p>
+              <div className="text-gray-800 font-medium">{back}</div>
               <div className="text-xs text-gray-500 mt-4">
                 Clique para voltar à pergunta
               </div>
@@ -581,7 +574,7 @@ const SectionNav: React.FC<{
       {/* Desktop Sidebar */}
       <aside className="w-64 bg-white/80 backdrop-blur-sm border-r border-gray-200/80 p-6 fixed h-full hidden lg:block">
         <h1 className="text-2xl font-bold text-primary mb-8">
-          Guia do Investidor
+          Guia OLITEF - Nível 3 (2025)
         </h1>
         <nav>
           <ul className="space-y-2">
@@ -607,7 +600,9 @@ const SectionNav: React.FC<{
 
       {/* Mobile Navigation */}
       <header className="lg:hidden mb-6">
-        <h1 className="text-2xl font-bold text-primary">Guia do Investidor</h1>
+        <h1 className="text-2xl font-bold text-primary">
+          Guia OLITEF - Nível 3 (2025)
+        </h1>
         <select
           value={activeSection}
           onChange={(e) => onSectionChange(e.target.value)}
@@ -774,6 +769,7 @@ const CompoundInterestCalculator: React.FC = () => {
 const FlashCardSection: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState(0);
   const [currentCardIndex, setCurrentCardIndex] = useState(0);
+  const [isFlipped, setIsFlipped] = useState(false);
 
   const currentCategory = flashCardData[selectedCategory];
   const currentCard = currentCategory.cards[currentCardIndex];
@@ -781,18 +777,25 @@ const FlashCardSection: React.FC = () => {
   const nextCard = () => {
     if (currentCardIndex < currentCategory.cards.length - 1) {
       setCurrentCardIndex(currentCardIndex + 1);
+      setIsFlipped(false); // Reset to front when advancing
     }
   };
 
   const prevCard = () => {
     if (currentCardIndex > 0) {
       setCurrentCardIndex(currentCardIndex - 1);
+      setIsFlipped(false); // Reset to front when going back
     }
   };
 
   const changeCategory = (categoryIndex: number) => {
     setSelectedCategory(categoryIndex);
     setCurrentCardIndex(0);
+    setIsFlipped(false); // Reset to front when changing category
+  };
+
+  const toggleCard = () => {
+    setIsFlipped(!isFlipped);
   };
 
   return (
@@ -825,7 +828,12 @@ const FlashCardSection: React.FC = () => {
 
       {/* Flash Card */}
       <div className="max-w-2xl mx-auto">
-        <FlashCard front={currentCard.front} back={currentCard.back} />
+        <FlashCard
+          front={currentCard.front}
+          back={currentCard.back}
+          isFlipped={isFlipped}
+          onToggle={toggleCard}
+        />
       </div>
 
       {/* Navigation */}
@@ -950,7 +958,7 @@ const QuizSection: React.FC = () => {
                   <h4 className="font-semibold text-green-800 mb-2">
                     Resposta Esperada:
                   </h4>
-                  <p className="text-green-700">{currentQuestion.answer}</p>
+                  <div className="text-green-700">{currentQuestion.answer}</div>
                 </CardContent>
               </Card>
             )}
@@ -1089,7 +1097,7 @@ export default function Index() {
           <Card className="p-8">
             <CardHeader>
               <CardTitle className="text-3xl font-bold text-gray-800">
-                Bem-vindo ao Guia Interativo do Investidor
+                Bem-vindo ao Guia para a OLITEF 2025
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -1191,12 +1199,12 @@ export default function Index() {
                 },
                 {
                   title: "Tesouro IPCA+",
-                  content: "Protege seu dinheiro da inflação.",
+                  content: "Rende paralelamente a inflação.",
                 },
                 {
                   title: "RendA+ e Educa+",
                   content:
-                    "Focados em aposentadoria e educação, com pagamentos mensais no futuro.",
+                    "Focados em aposentadoria e educação, respectivamente, com pagamentos mensais no futuro.",
                 },
               ]}
             />
@@ -1216,8 +1224,7 @@ export default function Index() {
                 },
                 {
                   title: "Garantia",
-                  content:
-                    "Cobertura do FGC de até R$ 250 mil por CPF/instituição.",
+                  content: "Cobertura do FGC de até R$ 250 mil por CPF.",
                 },
               ]}
             />
