@@ -379,7 +379,7 @@ const quizData = [
       },
       {
         question:
-          "Qual a principal diferença de rentabilidade da Poupança em relação a títulos pós-fixados atuais?",
+          "Qual a principal diferença de rentabilidade da Poupança em relaç��o a títulos pós-fixados atuais?",
         answer:
           "A Poupança só rende a cada 30 dias, enquanto os títulos pós-fixados atuais geralmente rendem diariamente.",
       },
@@ -1417,12 +1417,12 @@ export default function Index() {
               </CardContent>
             </Card>
 
-            <Card className="p-6 hover:shadow-lg transition-shadow duration-200">
+            <Card className="p-4 sm:p-6 hover:shadow-lg transition-shadow duration-200">
               <CardHeader>
-                <CardTitle className="text-xl text-primary flex items-center gap-2">
+                <CardTitle className="text-lg sm:text-xl text-primary flex items-center gap-2">
                   🎓 Curso B3
                 </CardTitle>
-                <CardDescription>
+                <CardDescription className="text-sm sm:text-base">
                   Comece por aqui para investir - Curso oficial da B3
                 </CardDescription>
               </CardHeader>
