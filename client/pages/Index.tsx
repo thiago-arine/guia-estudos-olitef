@@ -39,7 +39,7 @@ const sections = [
   { id: "calculadora", label: "Calculadora de Juros", icon: "➗" },
   { id: "flashcards", label: "Flash Cards", icon: "🎯" },
   { id: "questionario", label: "Questionário", icon: "📝" },
-  { id: "provas-anteriores", label: "Provas Anteriores", icon: "📄" },
+  { id: "provas-anteriores", label: "Conteúdos Complementares", icon: "📄" },
 ];
 
 const flashCardData = [
