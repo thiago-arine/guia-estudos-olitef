@@ -287,7 +287,9 @@ const quizData = [
       },
       {
         question: "Qual é a fórmula dos Juros Simples?",
-        answer: "J=C⋅i⋅t.",
+        answer: (
+          <code className="font-mono">J = C × i × t</code>
+        ),
       },
       {
         question:
