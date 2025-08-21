@@ -1216,7 +1216,7 @@ export default function Index() {
               details={[
                 {
                   title: "CDB",
-                  content: "Certificado de Depósito Banc��rio. O mais comum.",
+                  content: "Certificado de Depósito Bancário. O mais comum.",
                 },
                 {
                   title: "LCI/LCA",
@@ -1433,7 +1433,7 @@ export default function Index() {
                 </p>
                 <Button
                   className="w-full"
-                  onClick={() => window.open('https://cdn.builder.io/o/assets%2F776fb6a9bcd04c3cad60f1ae1f8d4051%2Fe9a26167341446feb6ef1d6f804f3c13?alt=media&token=d61da3d0-08b1-4911-aa4a-0f433749aa01&apiKey=776fb6a9bcd04c3cad60f1ae1f8d4051', '_blank')}
+                  onClick={() => window.open('https://cdn.builder.io/o/assets%2F776fb6a9bcd04c3cad60f1ae1f8d4051%2F3a1f9407858f413fafaff82c3d5dd9f2?alt=media&token=cdedbe3a-2666-4a71-9282-15a426ae8b86&apiKey=776fb6a9bcd04c3cad60f1ae1f8d4051', '_blank')}
                 >
                   Baixar Material Extra
                 </Button>
