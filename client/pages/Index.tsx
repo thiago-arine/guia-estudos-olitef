@@ -246,7 +246,7 @@ const flashCardData = [
     ],
   },
   {
-    category: "Títulos Espec��ficos",
+    category: "Títulos Específicos",
     cards: [
       {
         front: "Para que serve o Tesouro Educa+?",
