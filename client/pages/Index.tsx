@@ -411,7 +411,7 @@ const quizData = [
         question:
           "Uma empresa que já fez seu IPO decide emitir mais a��ões para captar novos recursos. Como é chamada essa nova emiss��o e qual tipo de oferta (primária ou secundária) ela provavelmente será?",
         answer:
-          'É chamada de "Follow on". Provavelmente será uma oferta primária, pois os recursos captados entrar��o diretamente na empresa para financiar seus projetos e aumentar o capital.',
+          'É chamada de "Follow on". Provavelmente será uma oferta primária, pois os recursos captados entrarão diretamente na empresa para financiar seus projetos e aumentar o capital.',
       },
       {
         question:
@@ -955,7 +955,7 @@ const QuizSection: React.FC = () => {
 
           <div className="space-y-4">
             <textarea
-              className="w-full min-h-[120px] p-3 border rounded-lg resize-none"
+              className="w-full min-h-[100px] sm:min-h-[120px] p-3 border rounded-lg resize-none text-sm sm:text-base"
               placeholder="Digite sua resposta aqui..."
               value={userAnswers[currentQuestionIndex] || ""}
               onChange={(e) => handleAnswerChange(e.target.value)}
@@ -965,6 +965,7 @@ const QuizSection: React.FC = () => {
               <Button
                 onClick={() => setShowAnswer(!showAnswer)}
                 variant="outline"
+                className="text-sm sm:text-base"
               >
                 {showAnswer ? "Ocultar" : "Ver"} Resposta
               </Button>
