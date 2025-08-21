@@ -335,7 +335,7 @@ const quizData = [
       },
       {
         question:
-          "Qual o nome da primeira emissão de ações de uma empresa no mercado, para o público em geral?",
+          "Qual o nome da primeira emissão de ações de uma empresa no mercado, para o p��blico em geral?",
         answer: "IPO (Oferta Pública Inicial).",
       },
       {
@@ -581,7 +581,7 @@ const SectionNav: React.FC<{
       {/* Desktop Sidebar */}
       <aside className="w-64 bg-white/80 backdrop-blur-sm border-r border-gray-200/80 p-6 fixed h-full hidden lg:block">
         <h1 className="text-2xl font-bold text-primary mb-8">
-          Guia do Investidor
+          Guia OLITEF - Nível 3 (2025)
         </h1>
         <nav>
           <ul className="space-y-2">
@@ -607,7 +607,7 @@ const SectionNav: React.FC<{
 
       {/* Mobile Navigation */}
       <header className="lg:hidden mb-6">
-        <h1 className="text-2xl font-bold text-primary">Guia do Investidor</h1>
+        <h1 className="text-2xl font-bold text-primary">Guia OLITEF - Nível 3 (2025)</h1>
         <select
           value={activeSection}
           onChange={(e) => onSectionChange(e.target.value)}
@@ -1089,7 +1089,7 @@ export default function Index() {
           <Card className="p-8">
             <CardHeader>
               <CardTitle className="text-3xl font-bold text-gray-800">
-                Bem-vindo ao Guia Interativo do Investidor
+                Bem-vindo ao Guia para a OLITEF 2025
               </CardTitle>
             </CardHeader>
             <CardContent>
