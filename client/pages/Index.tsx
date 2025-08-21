@@ -1404,7 +1404,7 @@ export default function Index() {
                   praticar e conhecer o estilo das questões.
                 </p>
                 <Button
-                  className="w-full"
+                  className="w-full text-sm sm:text-base"
                   onClick={() =>
                     window.open(
                       "https://upmat-gestao.s3.us-west-2.amazonaws.com/Olitef/2024/Provas+e+Gabaritos/Prova+e+Gabarito+N%C3%ADvel+3+(1%C2%BA+Ano+do+Ensino+M%C3%A9dio)+-+OLITEF+2024.pdf",
@@ -1432,7 +1432,7 @@ export default function Index() {
                   investimentos no mercado brasileiro.
                 </p>
                 <Button
-                  className="w-full"
+                  className="w-full text-sm sm:text-base"
                   onClick={() =>
                     window.open(
                       "https://edu.b3.com.br/w/comece-por-aqui-para-investir-curso",
@@ -1461,7 +1461,7 @@ export default function Index() {
                   financeiro brasileiro.
                 </p>
                 <Button
-                  className="w-full"
+                  className="w-full text-sm sm:text-base"
                   onClick={() =>
                     window.open(
                       "https://cdn.builder.io/o/assets%2F776fb6a9bcd04c3cad60f1ae1f8d4051%2F3a1f9407858f413fafaff82c3d5dd9f2?alt=media&token=cdedbe3a-2666-4a71-9282-15a426ae8b86&apiKey=776fb6a9bcd04c3cad60f1ae1f8d4051",
