@@ -56,7 +56,7 @@ const flashCardData = [
       },
       {
         front:
-          "Qual a f��rmula dos Juros Compostos e o que cada letra significa?",
+          "Qual a fórmula dos Juros Compostos e o que cada letra significa?",
         back: "M=C⋅(1+i)ⁿ. M = Montante, C = Capital, i = Taxa de Juros, n = Tempo.",
       },
       {
@@ -317,7 +317,7 @@ const quizData = [
       },
       {
         question:
-          "Qual fundo garante depósitos em conta e investimentos bancários em até R$ 250.000,00 por CPF e por instituição financeira?",
+          "Qual fundo garante depósitos em conta e investimentos bancários em até R$ 250.000,00 por CPF?",
         answer: "FGC (Fundo Garantidor de Crédito).",
       },
       {
