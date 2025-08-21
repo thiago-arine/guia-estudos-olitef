@@ -362,7 +362,7 @@ const quizData = [
         question:
           "Se um investimento de Renda Fixa tem remuneração pós-fixada atrelada ao IPCA, o que isso significa para o investidor?",
         answer:
-          "Significa que o ganho exato só será conhecido no vencimento, pois ele irá variar conforme a inflaç��o (IPCA) ao longo do período do investimento.",
+          "Significa que o ganho exato só será conhecido no vencimento, pois ele irá variar conforme a inflação (IPCA) ao longo do período do investimento.",
       },
       {
         question:
