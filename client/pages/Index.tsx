@@ -1363,7 +1363,7 @@ export default function Index() {
         {/* Provas Anteriores Section */}
         <section id="provas-anteriores" className="mb-16">
           <h2 className="text-3xl font-bold text-gray-800 mb-2">
-            Acesso a Provas Anteriores
+            Acesso a Conteúdos Complementares
           </h2>
           <p className="text-gray-500 mb-8">
             Estude com materiais e provas de edições passadas da OLITEF.
