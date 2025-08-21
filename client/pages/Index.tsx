@@ -1366,8 +1366,9 @@ export default function Index() {
             Acesso a Provas Anteriores e Recursos
           </h2>
           <p className="text-gray-500 mb-8">
-            Estude com materiais e provas de edições passadas da OLITEF.
-            Utilize estes recursos para praticar e se familiarizar com o formato das questões.
+            Estude com materiais e provas de edições passadas da OLITEF. Utilize
+            estes recursos para praticar e se familiarizar com o formato das
+            questões.
           </p>
 
           <div className="grid md:grid-cols-1 lg:grid-cols-4 gap-6">
@@ -1377,17 +1378,23 @@ export default function Index() {
                   📚 Prova 2024
                 </CardTitle>
                 <CardDescription>
-                  Prova e Gabarito do Nível 3 (1º Ano do Ensino Médio) - OLITEF 2024
+                  Prova e Gabarito do Nível 3 (1º Ano do Ensino Médio) - OLITEF
+                  2024
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Acesse a prova completa com gabarito da edição anterior para praticar
-                  e conhecer o estilo das questões.
+                  Acesse a prova completa com gabarito da edição anterior para
+                  praticar e conhecer o estilo das questões.
                 </p>
                 <Button
                   className="w-full"
-                  onClick={() => window.open('https://upmat-gestao.s3.us-west-2.amazonaws.com/Olitef/2024/Provas+e+Gabaritos/Prova+e+Gabarito+N%C3%ADvel+3+(1%C2%BA+Ano+do+Ensino+M%C3%A9dio)+-+OLITEF+2024.pdf', '_blank')}
+                  onClick={() =>
+                    window.open(
+                      "https://upmat-gestao.s3.us-west-2.amazonaws.com/Olitef/2024/Provas+e+Gabaritos/Prova+e+Gabarito+N%C3%ADvel+3+(1%C2%BA+Ano+do+Ensino+M%C3%A9dio)+-+OLITEF+2024.pdf",
+                      "_blank",
+                    )
+                  }
                 >
                   Baixar Prova 2024
                 </Button>
@@ -1405,12 +1412,17 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Curso gratuito e oficial da B3 que ensina os fundamentos
-                  dos investimentos no mercado brasileiro.
+                  Curso gratuito e oficial da B3 que ensina os fundamentos dos
+                  investimentos no mercado brasileiro.
                 </p>
                 <Button
                   className="w-full"
-                  onClick={() => window.open('https://edu.b3.com.br/w/comece-por-aqui-para-investir-curso', '_blank')}
+                  onClick={() =>
+                    window.open(
+                      "https://edu.b3.com.br/w/comece-por-aqui-para-investir-curso",
+                      "_blank",
+                    )
+                  }
                 >
                   Acessar Curso B3
                 </Button>
@@ -1428,12 +1440,18 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Material complementar com conceitos fundamentais de investimentos
-                  e economia, focado nos produtos do mercado financeiro brasileiro.
+                  Material complementar com conceitos fundamentais de
+                  investimentos e economia, focado nos produtos do mercado
+                  financeiro brasileiro.
                 </p>
                 <Button
                   className="w-full"
-                  onClick={() => window.open('https://cdn.builder.io/o/assets%2F776fb6a9bcd04c3cad60f1ae1f8d4051%2F3a1f9407858f413fafaff82c3d5dd9f2?alt=media&token=cdedbe3a-2666-4a71-9282-15a426ae8b86&apiKey=776fb6a9bcd04c3cad60f1ae1f8d4051', '_blank')}
+                  onClick={() =>
+                    window.open(
+                      "https://cdn.builder.io/o/assets%2F776fb6a9bcd04c3cad60f1ae1f8d4051%2F3a1f9407858f413fafaff82c3d5dd9f2?alt=media&token=cdedbe3a-2666-4a71-9282-15a426ae8b86&apiKey=776fb6a9bcd04c3cad60f1ae1f8d4051",
+                      "_blank",
+                    )
+                  }
                 >
                   Baixar Material Extra
                 </Button>
@@ -1451,12 +1469,14 @@ export default function Index() {
               </CardHeader>
               <CardContent>
                 <p className="text-gray-600 mb-4">
-                  Faça sua inscrição para a Olimpíada de Educação Financeira 2025.
-                  Não perca o prazo!
+                  Faça sua inscrição para a Olimpíada de Educação Financeira
+                  2025. Não perca o prazo!
                 </p>
                 <Button
                   className="w-full bg-green-600 hover:bg-green-700"
-                  onClick={() => window.open('https://forms.gle/uSfRyobTWoQSdPEA6', '_blank')}
+                  onClick={() =>
+                    window.open("https://forms.gle/uSfRyobTWoQSdPEA6", "_blank")
+                  }
                 >
                   Inscrever-se Agora
                 </Button>
@@ -1466,14 +1486,17 @@ export default function Index() {
 
           <Card className="mt-6 p-6 bg-blue-50 border-blue-200">
             <CardHeader>
-              <CardTitle className="text-lg text-blue-800">💡 Dica de Estudo</CardTitle>
+              <CardTitle className="text-lg text-blue-800">
+                💡 Dica de Estudo
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <p className="text-blue-700">
-                Recomendamos começar com o <strong>Curso B3</strong> para uma base sólida,
-                depois estudar o <strong>Material Extra</strong> para aprofundar os conceitos,
-                e finalizar praticando com a <strong>Prova 2024</strong> para se familiarizar
-                com o formato e nível das questões.
+                Recomendamos começar com o <strong>Curso B3</strong> para uma
+                base sólida, depois estudar o <strong>Material Extra</strong>{" "}
+                para aprofundar os conceitos, e finalizar praticando com a{" "}
+                <strong>Prova 2024</strong> para se familiarizar com o formato e
+                nível das questões.
               </p>
             </CardContent>
           </Card>
