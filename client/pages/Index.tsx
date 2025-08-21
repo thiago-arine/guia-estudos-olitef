@@ -56,7 +56,7 @@ const flashCardData = [
       },
       {
         front:
-          "Qual a fórmula dos Juros Compostos e o que cada letra significa?",
+          "Qual a f��rmula dos Juros Compostos e o que cada letra significa?",
         back: "M=C⋅(1+i)ⁿ. M = Montante, C = Capital, i = Taxa de Juros, n = Tempo.",
       },
       {
@@ -957,7 +957,7 @@ const QuizSection: React.FC = () => {
                   <h4 className="font-semibold text-green-800 mb-2">
                     Resposta Esperada:
                   </h4>
-                  <p className="text-green-700">{currentQuestion.answer}</p>
+                  <div className="text-green-700">{currentQuestion.answer}</div>
                 </CardContent>
               </Card>
             )}
