@@ -335,7 +335,7 @@ const quizData = [
       },
       {
         question:
-          "Qual o nome da primeira emissão de ações de uma empresa no mercado, para o p��blico em geral?",
+          "Qual o nome da primeira emissão de ações de uma empresa no mercado, para o público em geral?",
         answer: "IPO (Oferta Pública Inicial).",
       },
       {
@@ -1191,12 +1191,12 @@ export default function Index() {
                 },
                 {
                   title: "Tesouro IPCA+",
-                  content: "Protege seu dinheiro da inflação.",
+                  content: "Rende paralelamente a inflação.",
                 },
                 {
                   title: "RendA+ e Educa+",
                   content:
-                    "Focados em aposentadoria e educação, com pagamentos mensais no futuro.",
+                    "Focados em aposentadoria e educação, respectivamente, com pagamentos mensais no futuro.",
                 },
               ]}
             />
